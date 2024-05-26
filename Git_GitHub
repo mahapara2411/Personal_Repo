@@ -1,1 +1,34 @@
+Git is a distributed version contral system.
+
+Stages of Git:
+Working space
+Staging Area
+Local Repo
+Central repo
+
+Git Commands:
+
+git config --global user.name "<username"> -> To configure username and email
+git config --global user.email "<email id">
+git config --list -> To display the configured details
+git Init -> Initialize an empty dir as a git repo
+git clone <repo_url> -> To retrieve entire repository present in github
+git add . -> add to the current directory
+git add <filename>
+git commit -m <"message"> -> commit changes to local repo / git commit -am <"message"> -> To add and commit at the same time
+git push -> to push the code to the remote repo
+git pull -> pull the git changes from remote repo
+git status -> show all untracked files
+
+git log / git log --oneline -> To see the git logs
+git show <commit_id>
+git show <commit_id>:<filename> -> when modification is done in multiple files together,system generates same commit id
+
+git branch -> To see branch details
+git branch <branch_name> -> To create new branch
+git checkout <branch_name> -> to go to particular branch
+git branch -b 
+
+
+
 
