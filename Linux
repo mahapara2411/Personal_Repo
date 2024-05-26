@@ -7,14 +7,16 @@ LINUX COMMANDS:
 ls ->List files and directories
 ls-ltrh -> Detailed info of thr file with time and human redable format
 ls-a -> shows the hidden files
-cd ->hange Directory
+cd ->change Directory, cd <dirname/>
 pwd ->Print corrent working directory
-mkdir ->create new directory
-rm -> Remove file and directory
-cp ->Copy files and directorie
+mkdir ->create new directory, mkdir <dirname>
+rm -> Remove file and directory, rm -rf <filename> {remove,force removal}
+cp ->Copy files and directorie, cp <file1> <file2>
 mv -> Move files and directorie
-touch -> Create an empty file
-cat -> View the contents of the file
+touch -> Create an empty file, touch <filename>
+cat -> View the contents of the file, cat <filename>
+vi -> Is to edit the content of the file, vi <filename>, click on I (insert), write someting, :wq
+
 
 -----------------------File Permission Commands----------------------------------:
 
@@ -51,6 +53,80 @@ Display all the processes -> ps-ef
 Secondary memory -> df -h
 cpu -> top
 directory -> du
+
+------------------------Hard Link & Soft Link------------------------:
+
+Soft Link: It stores the path of the File and works as a shortcut to the file.
+           If original file is moved/deleted the soft link gets deleted and the link will point to a non-existent file..
+           Inode value of both original file and soft link is different.
+           Soft link can be linked to a directory.
+
+ln  -s [original filename] [link name] 
+
+Hard Link: If original file is moved/deleted the hard link will still show the content of the file.
+           Inode value of both original file and hard link is same.
+           Hard link cannot be created for a directory to avoid recursive loops.
+
+ln  [original filename] [link name]
+
+------------------------Find, Sort and Grep------------------------:
+
+Grep -> stands for Global Regular Expression Print
+        To search text or strings in a file 
+     -v    ║ Shows all the lines except the searched one    ║ 
+     -c    ║ Displays only the count of matching lines      ║ 
+     -n    ║ Shows the matching line and its number.        ║ 
+     -i    ║ Match both (upper and lower) case.             ║ 
+     -l    shows just the name of the file with the string║
+e.g. Grep -i word <filename>
+
+
+Find -> Search the path of file or Directory
+e.g. find <path of file>, find /home/dir1/file1
+     find . -name <filename> -> To search in present directory
+     find / -name <filename> -> To search in entire filesystem
+
+Sort -> It arranges the data aplabetically or numerically in asc/desc order.
+e.g. sort <filename>
+
+----------------------wget,tar,zar,unzip---------------------------------:
+ wget: To get the package from Internet
+ e.g. wget <link address>
+
+ tar -cvf <tar_file_name> <file_name> ->compressing file to tar format
+ tar -xvf <tar_file_name> -> extracting / decompressing file
+
+ Zip: To compress files to reduce file size
+
+ zip <filename.zip> <file1.txt> <file2.txt> -> storing file1.txt & file2.txt under file.zip folder
+ zip -u <filename.zip> <file3.txt> -> -u means we can add more files into file.zip folder.
+ zip -r [file_name.zip] [directory_name] -> Zip all the files present in directory/sub-dir
+
+ unzip <filename.zip>
+
+-----------------------SSH (Secure shell)---------------------------------:
+
+Provides secure encrypted connection between two hosts over an insecure network.
+
+Master m/c:
+ssh -keygen
+cd/root/.ssh
+cat id_rsa.pub
+cd
+ssh <public_ip_host machine>
+
+Host m/c:
+cd/root/.ssh
+vi authorized_keys <paste the public key>
+To see public ip of host machine: curl ifconfig.me
+
+--------------------------sed and awk command--------------------------------:
+
+
+
+
+
+
 
 
 
