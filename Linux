@@ -109,14 +109,14 @@ e.g. sort <filename>
 Provides secure encrypted connection between two hosts over an insecure network.
 
 Master m/c:
-ssh -keygen
-cd/root/.ssh
+ssh-keygen
+cd /root/.ssh
 cat id_rsa.pub
 cd
 ssh <public_ip_host machine>
 
 Host m/c:
-cd/root/.ssh
+cd /root/.ssh
 vi authorized_keys <paste the public key>
 To see public ip of host machine: curl ifconfig.me
 
