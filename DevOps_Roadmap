@@ -1,0 +1,27 @@
+1. Linux
+2. Git & GitHub / Bitbucket
+3. Jenkins / CircleCI / Bamboo - CI
+4. Maven / Gradle - Build tool 
+5. Ansible / Chef / Puppet - Configuration mgmt tool
+6. Docker - Containerisation tool
+7. Kubernetes - 
+8. Prometheus & Grafana - Monitoring tool
+9. Terraform - Infrastructure as a tool (IAC)
+10. Nexus / Jfrog - Artifactory Repo
+11. SonarQube - Code Quality analysis
+
+---- CLOUD ----
+AWS
+ - EC2
+ - IAM
+ - S3
+ - EBS
+ - VPC
+ - ELB
+ - Auto Scaling
+ - Lambda
+ - ECR
+ - ECS
+
+---- SHELL SCRIPT ----
+Basics
