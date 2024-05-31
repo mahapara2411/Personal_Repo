@@ -29,7 +29,11 @@ git show <commit_id>:<filename> -> when modification is done in multiple files t
 git branch -> To see branch details
 git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
 git checkout <branch_name> -> to go to particular branch
-git branch -b 
+
+To merge the branches to the Main branch:
+git merge
+git cherry-pick
+git rebase
 
 
 
