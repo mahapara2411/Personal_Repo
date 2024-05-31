@@ -26,7 +26,7 @@ git show <commit_id>
 git show <commit_id>:<filename> -> when modification is done in multiple files together,system generates same commit id
 
 git branch -> To see branch details
-git branch <branch_name> -> To create new branch
+git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
 git checkout <branch_name> -> to go to particular branch
 git branch -b 
 
