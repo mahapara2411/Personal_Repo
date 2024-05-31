@@ -20,6 +20,7 @@ git commit -m <"message"> -> commit changes to local repo / git commit -am <"mes
 git push -> to push the code to the remote repo
 git pull -> pull the git changes from remote repo
 git status -> show all untracked files
+git diff ->To see the modifications made 
 
 git log / git log --oneline -> To see the git logs
 git show <commit_id>
