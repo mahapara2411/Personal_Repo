@@ -7,7 +7,7 @@ LINUX COMMANDS:
 ls ->List files and directories
 ls -ltrh -> Detailed info of thr file with time and human redable format
 ls -a -> shows the hidden files
-ls -i -> To check the inode value
+ls -i -> To check the inode value of file/dir
 cd ->change Directory, cd <dirname/>
 pwd ->Print corrent working directory
 mkdir ->create new directory, mkdir <dirname>
