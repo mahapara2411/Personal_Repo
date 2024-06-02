@@ -106,7 +106,7 @@ e.g. find <path of file>, find /home/dir1/file1
      find . -name <filename> -> To search in present directory
      find / -name <filename> -> To search in entire filesystem
 
-Sort -> It arranges the data aplabetically or numerically in asc/desc order.
+Sort -> It arranges the data alphabetically or numerically in asc/desc order.
 e.g. sort <filename>
 
 ----------------------wget,scp, curl ---------------------------------:
