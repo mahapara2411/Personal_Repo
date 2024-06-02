@@ -19,6 +19,10 @@ cat -> View the contents of the file, cat <filename>
 vi -> Is to edit the content of the file, vi <filename>, click on I (insert), write someting, :wq
 man -> It is short term for manual page, man ls -> It will list down all the information about ls command.
 
+------------------------Linux Dir/File structure----------------------------------:
+/root -> for root user, root user can only create, del, modify anything
+/home -> This is for spacific user, no other user can manipulate naything in this. e.g. /home/bulbul
+
 
 -----------------------File Permission Commands----------------------------------:
 
