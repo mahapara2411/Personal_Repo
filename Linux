@@ -122,8 +122,9 @@ Pre-requisite for using scp:
 SSh installed on both the client and the server machines.
 Root access to both client and server machines.
 
-Curl: Used to fetch data/content from the url , or downloading files from the Internet
+Curl: Used to fetch data/content from the url , or uploading files to the server/downloading files from the Internet
 e.g. curl https://www.geeksforgeeks.org
+e.g. curl -T uploadfile.txt ftp://example.com/upload/
 e.g. curl -o [file_name] [URL...]
 
 ----------------------tar,zar,unzip -----------------------------------:
