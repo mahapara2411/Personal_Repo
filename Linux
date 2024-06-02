@@ -51,7 +51,7 @@ x: Execute Permission ->1
 
 chmod ->Change file permissions.
 e.g. chmod +rwx Filename
-     chmod 774 (user,group.other) Filename
+     chmod 774 (user,group,other) Filename
      chmod 664 Filename
     
 chown -> Change File owner.
