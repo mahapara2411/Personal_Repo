@@ -112,8 +112,19 @@ e.g. sort <filename>
  wget: To get the package from Internet
  e.g. wget <link address>
 
-scp: 
-curl:
+scp (secure copy protocol) : It lets you share files and data securely and easily. SCP uses encryption over an SSH (Secure Shell) connection, this ensures that the data being transferred is protected from suspicious attacks.
+We are able to use SCP in the following cases:
+Copy files within same machine.
+Copy files from a local host to remote host and vice versa.
+Copy files between two different remote servers.
+
+Pre-requisite for using scp:
+SSh installed on both the client and the server machines.
+Root access to both client and server machines.
+
+Curl: Used to fetch data/content from the url , or downloading files from the Internet
+e.g. curl https://www.geeksforgeeks.org
+e.g. curl -o [file_name] [URL...]
 
 ----------------------tar,zar,unzip -----------------------------------:
 
