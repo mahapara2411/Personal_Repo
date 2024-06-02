@@ -22,7 +22,20 @@ man -> It is short term for manual page, man ls -> It will list down all the inf
 ------------------------Linux Dir/File structure----------------------------------:
 /root -> for root user, root user can only create, del, modify anything
 /home -> This is for spacific user, no other user can manipulate naything in this. e.g. /home/bulbul
-
+/bin (binaries) -> all the commands for all the user are available here
+/sbin (system binaries) -> commands available only for root users, used for performing major changes in the config file, or any system changes
+/proc (process) -> all the applications process file is getting stored here
+/boot (Boot loader file)
+/dev (Device files) -> Interface between the hardware and software (harddisk info and software info)
+/media
+/etc (editable text configuration) -> all the config files of the application is getting stored here
+/srv (service data) 
+/sys (System) -> hardware related info is getting stored here
+/lib (system libraries) -> libraries required to run the application
+/tmp (temporary files) 
+/usr (user program)
+/var (variable files) -> cache,logs,email files,backup files,spool
+/opt (optional application) -> third party tool 
 
 -----------------------File Permission Commands----------------------------------:
 
@@ -95,9 +108,14 @@ e.g. find <path of file>, find /home/dir1/file1
 Sort -> It arranges the data aplabetically or numerically in asc/desc order.
 e.g. sort <filename>
 
-----------------------wget,tar,zar,unzip---------------------------------:
+----------------------wget,scp, curl ---------------------------------:
  wget: To get the package from Internet
  e.g. wget <link address>
+
+scp: 
+curl:
+
+----------------------tar,zar,unzip -----------------------------------:
 
  tar -cvf <tar_file_name> <file_name> ->compressing file to tar format
  tar -xvf <tar_file_name> -> extracting / decompressing file
