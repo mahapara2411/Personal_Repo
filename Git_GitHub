@@ -1,6 +1,7 @@
 Git is a distributed version control system.
 
 
+
 Stages of Git:
 Working space
 Staging Area
@@ -31,9 +32,14 @@ git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
 git checkout <branch_name> -> to go to particular branch
 
 To merge the branches to the Main branch:
-git merge
+git merge -> Merge preserves history, creating only one new merge commit
 git cherry-pick
-git rebase
+git rebase -> Rebase rewrites history, reapplying commits on top of another base branch
+
+how to resolve merge conflict?
+Ans : By deleting the conflict markers >>>>>>, --------, <<<<<<<<<<<<<
+
+
 
 
 
