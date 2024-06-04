@@ -38,6 +38,7 @@ git merge main
 -----(or) git merge feature main
 
 git cherry-pick -> Cherry-picking in Git means choosing a commit from one branch and applying it to another.
+e.g. git cherry-pick <commit-hash>
 
 git rebase -> Rebase rewrites history, reapplying commits on top of another base branch. 
 First, it eliminates the unnecessary merge commits required by git merge. 
