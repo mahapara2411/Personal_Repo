@@ -33,8 +33,13 @@ git checkout <branch_name> -> to go to particular branch
 
 To merge the branches to the Main branch:
 git merge -> Merge preserves history, creating only one new merge commit
+e.g. git checkout feature
+git merge main
+-----(or) git merge feature main
 git cherry-pick
 git rebase -> Rebase rewrites history, reapplying commits on top of another base branch
+e.g. git checkout feature
+git rebase main
 
 how to resolve merge conflict?
 Ans : By deleting the conflict markers >>>>>>, --------, <<<<<<<<<<<<<
