@@ -1,1 +1,24 @@
+Maven is an open-source build automation and project management tool widely used for Java applications.
+It is based on POM (Project object Model)
+As a build automation tool, it automates the source code compilation and dependency management, assembles binary codes into packages, and executes test scripts.
 
+Maven Coordinates:
+GMaven coordinates are a set of identifiers that uniquely identify a project, dependency, or plugin in a Maven POM file. They are a combination of the following values:
+groupId: The group, company, or department responsible for creating the project
+artifactId: A unique name for the project under the groupId
+version: Specifies a particular release of the project
+
+Maven Goals:
+Build life cycle is of three types:
+default
+clean
+site
+
+clean:
+validate:
+compile:
+test compile:
+test:
+package:
+verify:
+install:
