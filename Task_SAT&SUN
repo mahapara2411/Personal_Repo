@@ -1,0 +1,10 @@
+
+1. Create one EC2 M/C in AWS
+2. Install - GIT, JAVA 
+3. Set Java path & check version
+4. Install mvn by using wget cmd and install in /opt directory. 
+5. Set the mvn path 
+6. Install tomcat and start the server.
+---
+7. Clone Java project and build with mvn. 
+8. expose this application to outside world. 
