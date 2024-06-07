@@ -1,6 +1,14 @@
 Maven setup in local and linux:
-
+Prerequisite:
+JDK is required
 ---
 Java -version
 yum install java-1.8*
 find /usr/lib/jvm/java-1.8* | head -n 3
+vi ~ /.bash_profile  ->Inside this set the path of the java home page
+JAVA_HOME=<path of the JDK>
+PATH=$PATH:$HOME/bin:$JAVA_HOME
+
+To see the latest path 
+source ~ /.bash_profile
+echo $PATH
