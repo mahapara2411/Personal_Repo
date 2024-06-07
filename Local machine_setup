@@ -12,3 +12,16 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME
 To see the latest path 
 source ~ /.bash_profile
 echo $PATH
+
+
+----Maven set up----
+go to cd/opt
+wget <maven package download path>
+tar -xvf <tarfilename>
+vi ~ /.bash_profile -> to set up maven path
+M2_HOME=/opt/apache-maven-3.6.3(Maven path)
+M2=/opt/apache-maven-3.6.3/bin
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2:$M2_HOME
+source ~ /.bash_profile
+echo $PATH
+mvn --version
