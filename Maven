@@ -21,3 +21,53 @@ mvn lifecyle ref: https://maven.apache.org/guides/introduction/introduction-to-t
 - package: take the complied code and package it into a distributable format such as jar
 - install: install the package into local repo in mvn i.e. ".m2"
 - deploy: copies the final package to the remote repo
+
+Maven Project:
+maven architype:generate (under root)
+maven architype:generate | grep webapp
+maven architype:generate | grep maven-archetype-webapp
+select the version
+groupId: com.democompany
+artifactId: second-demo project
+version: Default Snapshot
+package: Default package
+cd second-demo project\
+ls --->pom.xml src
+tree
+cat pom.xml ---> pom.xml version, groupid, artifactid,package
+<properties>
+<dependencies>
+<builds>
+   <plugins> --> carries info of the Maven goals, and which lib we are going to use to excute these goals
+mvn clean install
+
+Settings.xml
+The settings.xml file configures a Maven installation. It’s similar to a pom.xml file but is defined globally or per user.
+
+Deploy Appln in Tomcat server using Maven:
+We need a Tomcat server and a Maven server
+Tomcat setup
+cd /opt (Tomcat server is configured under this location)
+cd apache-tomcat-8.5.58
+ls
+cat conf/tomcat-users.xml
+hostname tomcat
+sudo su -
+
+To start Tomcat appln:
+ls
+cd /opt/
+ls
+cd apache-tomcat-8.5.58/
+cd bin
+ls
+./startup.sh
+
+Deploy war file on Tomcat server using Maven:
+prerequisite: Maven server and Tomcat server
+1. download archetype maven-archetype-webapp
+2. update pom.xml code to add maven plugin to copy artifacts onto tomcat
+3. create settings.xml for credentials
+
+
+
