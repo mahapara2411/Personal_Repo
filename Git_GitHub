@@ -1,49 +1,48 @@
 Git is a distributed version control system.
 
-
-
 Stages of Git:
-Working space
-Staging Area
-Local Repo
-Central repo
+ - Working space
+ - Staging Area
+ - Local Repo
+ - Central repo
 
-Git Commands:
+GIT COMMANDS:
 
-git config --global user.name "<username"> -> To configure username and email
-git config --global user.email "<email id">
-git config --list -> To display the configured details
-git Init -> Initialize an empty dir as a git repo
-git clone <repo_url> -> To retrieve entire repository present in github
-git add . -> add to the current directory
-git add <filename>
-git commit -m <"message"> -> commit changes to local repo / git commit -am <"message"> -> To add and commit at the same time
-git push -> to push the code to the remote repo
-git pull -> pull the git changes from remote repo
-git status -> show all untracked files
-git diff ->To see the modifications made 
+ git config --global user.name "<username"> -> To configure username and email
+ git config --global user.email "<email id">
+ git config --list -> To display the configured details
+ git Init -> Initialize an empty dir as a git repo
 
-git log / git log --oneline -> To see the git logs
-git show <commit_id>
-git show <commit_id>:<filename> -> when modification is done in multiple files together,system generates same commit id
+ git clone <repo_url> -> To retrieve entire repository present in github
+ git add . -> add to the current directory
+ git add <filename>
+ git commit -m <"message"> -> commit changes to local repo / git commit -am <"message"> -> To add and commit at the same time
+ git push -> to push the code to the remote repo
+ git pull -> pull the git changes from remote repo
+ git status -> show all untracked files
+ git diff ->To see the modifications made 
 
-git branch -> To see branch details
-git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
-git checkout <branch_name> -> to go to particular branch
+ git log / git log --oneline -> To see the git logs
+ git show <commit_id>
+ git show <commit_id>:<filename> -> when modification is done in multiple files together,system generates same commit id
+
+ git branch -> To see branch details
+ git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
+ git checkout <branch_name> -> to go to particular branch
 
 To merge the branches to the Main branch:
-git merge -> Merge preserves history, creating only one new merge commit
-e.g. git checkout feature
-git merge main
+ git merge -> Merge preserves history, creating only one new merge commit
+   e.g. git checkout feature
+ git merge main
 -----(or) git merge feature main
 
 git cherry-pick -> Cherry-picking in Git means choosing a commit from one branch and applying it to another.
 e.g. git cherry-pick <commit-hash>
 
 git rebase -> Rebase rewrites history, reapplying commits on top of another base branch. 
-First, it eliminates the unnecessary merge commits required by git merge. 
-Second,rebasing also results in a perfectly linear project history—you can follow the tip of feature all the way to the beginning of the project without any forks.
-e.g. git checkout feature
+ First, it eliminates the unnecessary merge commits required by git merge. 
+ Second,rebasing also results in a perfectly linear project history—you can follow the tip of feature all the way to the beginning of the project without any forks.
+ e.g. git checkout feature
 git rebase main
 
 how to resolve merge conflict?
