@@ -5,12 +5,12 @@ JDK is required
 Java -version
 yum install java-1.8*
 find /usr/lib/jvm/java-1.8* | head -n 3
-vi ~ /.bash_profile  ->Inside this set the path of the java home page
+vi .bash_profile  ->Inside this set the path of the java home page
 JAVA_HOME=<path of the JDK>
 PATH=$PATH:$HOME/bin:$JAVA_HOME
 
-To see the latest path 
-source ~ /.bash_profile
+-----To see the latest path -------
+source ~/.bash_profile
 echo $PATH
 
 
@@ -18,7 +18,7 @@ echo $PATH
 go to cd/opt
 wget <maven package download path>
 tar -xvf <tarfilename>
-vi ~ /.bash_profile -> to set up maven path
+vi ~/.bash_profile -> to set up maven path
 M2_HOME=/opt/apache-maven-3.6.3(Maven path)
 M2=/opt/apache-maven-3.6.3/bin
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2:$M2_HOME
