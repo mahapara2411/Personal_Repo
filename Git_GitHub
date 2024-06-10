@@ -30,20 +30,20 @@ GIT COMMANDS:
  git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
  git checkout <branch_name> -> to go to particular branch
 
-To merge the branches to the Main branch:
+-----To merge the branches to the Main branch:-----
  git merge -> Merge preserves history, creating only one new merge commit
    e.g. git checkout feature
  git merge main
 -----(or) git merge feature main
 
 git cherry-pick -> Cherry-picking in Git means choosing a commit from one branch and applying it to another.
-e.g. git cherry-pick <commit-hash>
+  e.g. git cherry-pick <commit-hash>
 
 git rebase -> Rebase rewrites history, reapplying commits on top of another base branch. 
- First, it eliminates the unnecessary merge commits required by git merge. 
- Second,rebasing also results in a perfectly linear project history—you can follow the tip of feature all the way to the beginning of the project without any forks.
- e.g. git checkout feature
-git rebase main
+ -> First, it eliminates the unnecessary merge commits required by git merge. 
+ -> Second,rebasing also results in a perfectly linear project history—you can follow the tip of feature all the way to the beginning of the project without any forks.
+    e.g. git checkout feature
+    git rebase main
 
 how to resolve merge conflict?
 Ans : By deleting the conflict markers >>>>>>, --------, <<<<<<<<<<<<<
