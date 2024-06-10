@@ -1,0 +1,4 @@
+- Apache Tomcat is free & open source web server
+- It is used to run Java web application
+- Developed by using Java Programming language
+- Runs on port 8080 by default (port can be changed in server.xml)
