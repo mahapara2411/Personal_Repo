@@ -2,3 +2,16 @@
 - It is used to run Java web application
 - Developed by using Java Programming language
 - Runs on port 8080 by default (port can be changed in server.xml)
+
+------------Tomcat server Directory structure---------------
+
+- bin -> contains binary files to start and stop server
+- conf -> contains configuration files (e.g. server.xml, user.xml)
+- lib -> contains libraries (e.g. servlet-api.jar,jsp-api.jar) 
+- webapps -> This is called deployment directory (we can keep the war file in webapps folder)
+- Logs -> Server execution logs will be created here
+- Temp -> It contains temporary files
+
+-----------To change default port number---------
+- Default port can be changed in server.xml under conf folder
+- <connector port = "8080" -> This can be changed to <connector port = "9090"
