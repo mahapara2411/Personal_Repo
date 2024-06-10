@@ -11,7 +11,7 @@ GIT COMMANDS:
  git config --global user.name "<username"> -> To configure username and email
  git config --global user.email "<email id">
  git config --list -> To display the configured details
- git Init -> Initialize an empty dir as a git repo
+ git init -> Initialize an empty dir as a git repo
 
  git clone <repo_url> -> To retrieve entire repository present in github
  git add . -> add to the current directory
