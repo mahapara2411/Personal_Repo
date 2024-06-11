@@ -3,6 +3,17 @@
 - Developed by using Java Programming language
 - Runs on port 8080 by default (port can be changed in server.xml)
 
+How to start tomcat server?
+ - catalina.sh - does everything
+ - .\startup.sh - calls catalina.sh start
+ - .\shutdown.sh - To stop the Tomcat server
+How to start tomcat server is running or not?
+ - ps -ef | grep -i tomcat 
+ - netstat -lntpu | grep :8080 
+ - systemctl status tomcat
+ - systemctl enable tomcat
+ - systemctl stop/start tomcat
+
 ------------Tomcat server Directory structure---------------
 
 - bin -> contains binary files to start and stop server
