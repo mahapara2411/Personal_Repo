@@ -16,6 +16,10 @@
 - Default port can be changed in server.xml under conf folder
 - <connector port = "8080" -> This can be changed to <connector port = "9090"
 
+-------------To add user to Tomcat server---------
+- In tomcat-user.xml file
+- <user username="tomcat" password="secret" roles="manager-gui" />
+
 
 
 -------How to deploy appln to Tomcat server:-----
