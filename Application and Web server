@@ -16,8 +16,8 @@
 - Default port can be changed in server.xml under conf folder
 - <connector port = "8080" -> This can be changed to <connector port = "9090"
 
--------------To add user to Tomcat server---------
-- In tomcat-user.xml file
+-------------To add multiple user to Tomcat server---------
+- In tomcat-users.xml file under conf folder
 - <user username="tomcat" password="secret" roles="manager-gui" />
 
 
