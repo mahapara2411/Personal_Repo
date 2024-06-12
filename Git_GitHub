@@ -30,6 +30,11 @@ GIT COMMANDS:
  git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
  git checkout <branch_name> -> to go to particular branch
 
+---------How to set passwordless authentication in github--------
+Go to Setting->Developer Setting->Personal access Tokens->Select Tokens(classic)->Generate New Token->Select Generate new token(classic)->Provide anything in the Note,expiration and selsct all the scopes->click on generate token
+Copy the token and paste it in the below command:
+- git remote set-url origin https://<token>@github.com/username/reponame
+ 
 -----To merge the branches to the Main branch:-----
  git merge -> Merge preserves history, creating only one new merge commit
    e.g. git checkout feature
