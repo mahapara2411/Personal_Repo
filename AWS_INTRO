@@ -1,0 +1,11 @@
+-------------IAM : Identity and Access Management--------------
+ - Provides authentication and authorization
+ - Users: User can belong to multiple groups. (attach the policies to the users). "IAMuserChangepassword"
+ - Groups : Groups are collections of "users" and have "policies" attached to them.
+   - IAM User has limited permission to the account.
+ - Policies: Policies are JSON documents that outline permissions for users, groups or roles
+     1. User based policies
+       - IAM policies define which API calls should be allowed for a specific user.
+     2. Resource based policies
+       - Control access to an AWS resource.
+ - Roles: Collection of policies for AWS services.
