@@ -9,3 +9,13 @@
      2. Resource based policies
        - Control access to an AWS resource.
  - Roles: Collection of policies for AWS services.
+
+--------------EC2 (ELASTIC CLOUD COMPUTE)-----------------------
+- It is a Virtual server 
+- Types of EC2 Instances:
+ - General Purpose
+ - Compute optimized
+ - Memory optimized
+ - Storage optimized
+ - Accelerated computing
+- Regions and availability zone
