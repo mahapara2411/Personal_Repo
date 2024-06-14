@@ -31,6 +31,33 @@ How to start tomcat server is running or not?
 - In tomcat-users.xml file under conf folder
 - <user username="tomcat" password="secret" roles="manager-gui" />
 
+--------: FEW CONFIGURATION NEEDS TO DO :------
+
+Step 1:
+ find / -name contex.xml
+
+Step 2:
+  /webapps/host-manager/META-INF/contex.xml
+  /webapps/manager/META-INF/contex.xml
+
+ commented out <!--
+  value 
+ -->
+ 
+Step 3: 
+vi apache-tomcat-9.0.89/conf/tomcat-users.xml
+
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="secret" roles="manager-gui"/>
+
+Step 4:
+ ./startup.sh
+
 
 
 -------How to deploy appln to Tomcat server:-----
