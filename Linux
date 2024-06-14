@@ -105,6 +105,7 @@ Find -> Search the path of file or Directory
 e.g. find <path of file>, find /home/dir1/file1
      find . -name <filename> -> To search in present directory
      find / -name <filename> -> To search in entire filesystem
+     find . -name *.war -> To search a file
 
 Sort -> It arranges the data alphabetically or numerically in asc/desc order.
 e.g. sort <filename>
