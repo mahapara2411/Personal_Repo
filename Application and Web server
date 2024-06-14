@@ -58,7 +58,5 @@ vi apache-tomcat-9.0.89/conf/tomcat-users.xml
 Step 4:
  ./startup.sh
 
-
-
 -------How to deploy appln to Tomcat server:-----
 Git clone <repo_url>
