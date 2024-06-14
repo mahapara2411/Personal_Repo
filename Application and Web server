@@ -32,20 +32,24 @@ How to start tomcat server is running or not?
 - <user username="tomcat" password="secret" roles="manager-gui" />
 
 --------: FEW CONFIGURATION NEEDS TO DO :------
-
-Step 1:
- find / -name contex.xml
+Step-1: Install the Tomcat package
+- cd /opt (Install Tomcat in this path)
+- wget <link address> (tar.gz)
+- tar -xvf <tar.gz>
 
 Step 2:
-  /webapps/host-manager/META-INF/contex.xml
-  /webapps/manager/META-INF/contex.xml
+- find / -name contex.xml
+
+Step 3:
+- /webapps/host-manager/META-INF/contex.xml (webapps folder)
+- /webapps/manager/META-INF/contex.xml
 
  commented out <!--
   value 
  -->
  
-Step 3: 
-vi apache-tomcat-9.0.89/conf/tomcat-users.xml
+Step 4: 
+- vi apache-tomcat-9.0.89/conf/tomcat-users.xml
 
  <role rolename="manager-gui"/>
  <role rolename="manager-script"/>
@@ -55,8 +59,16 @@ vi apache-tomcat-9.0.89/conf/tomcat-users.xml
  <user username="deployer" password="deployer" roles="manager-script"/>
  <user username="tomcat" password="secret" roles="manager-gui"/>
 
-Step 4:
- ./startup.sh
+Step 5:
+- ./startup.sh (To start the Tomcat server)
+- ./shutdown.sh (To stop the Tomcat server)
 
 -------How to deploy appln to Tomcat server:-----
-Git clone <repo_url>
+- Git clone <repo_url>
+- mvn clean complie package deploy (war file will generate)
+- cp ~/ <source> <destination> (copy the war file to tomcat path from webapps path)
+-e.g. cp ~/.m2/repository/com/democompaly/second-demo-project/1.0-SNAPSHOT/second-demo-project-1.0-SNAPSHOT.war /opt/apache-t
+omcat-9.0.89/webapps
+-Refresh the tomcat server.
+
+
