@@ -31,6 +31,10 @@ How to start tomcat server is running or not?
 - In tomcat-users.xml file under conf folder
 - <user username="tomcat" password="secret" roles="manager-gui" />
 
+-------------How to check tomcat server is running or not?--------
+ - ps -ef | grep -i tomcat 
+ - netstat -lntpu | grep :8080 
+
 --------: FEW CONFIGURATION NEEDS TO DO :------
 Step-1: Install the Tomcat package
 - cd /opt (Install Tomcat in this path)
