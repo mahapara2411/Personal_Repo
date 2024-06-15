@@ -59,7 +59,7 @@ Ref: https://aws.amazon.com/ec2/instance-types/?gclid=Cj0KCQjw97SzBhDaARIsAFHXUW
 - Regions and availability zone
 
 ---------------AMI (Amazon Machine Images)---------------------
-- AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance
+- AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch the instance
 
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 - Size of VPC can be defined by using IP address range
