@@ -24,5 +24,6 @@
 - Size of VPC can be defined by using IP address range
 - subnet -> Splitting the IP address of the VPC
 - Inside VPC - Internet gateway - Public subnet- Elastic Load balancer (ELB) (Sends the request to private subnet) - Router Table - Security group - Private subnet
+- NACL - 
 - NAT Gateway - Helps to download resource from Internet and masks the IP address. It is cretaed in the Public subnet
 - SNAT - 
