@@ -52,6 +52,10 @@ Ref: https://aws.amazon.com/ec2/instance-types/?gclid=Cj0KCQjw97SzBhDaARIsAFHXUW
   - Configure storage (e.g. gp2,gp3 etc..)
   - Launch Instance
 
+- Steps to change the Instance type:
+  - Stop the Instance
+  - Actions ->Instance settings ->Change Instance type ->Select New Instance type ->Apply
+
 - Regions and availability zone
 
 ---------------AMI (Amazon Machine Images)---------------------
