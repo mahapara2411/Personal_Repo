@@ -61,6 +61,24 @@ Ref: https://aws.amazon.com/ec2/instance-types/?gclid=Cj0KCQjw97SzBhDaARIsAFHXUW
 ---------------AMI (Amazon Machine Images)---------------------
 - AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch the instance
 
+---------------EBS (Elastic Block Storage)----------------------
+- Block storage for use with EC2
+- Similar to External harddisk attached to a server
+- Availability zone specific
+- Can be linked or delinked to any server within the same availability zone
+- Amazon itself creates a replica of EBS in the same availability zone (e.g. Mumbai has 2 Az's, Az 'A' is having the EBS, its replica will be created by Amazon)
+- It can be moved to other Az by creating its snapshot and moving it to that Az
+- EBS Volume can be increased but cannot be decreased, take a snapshot and create a vplume for this snapshot.
+- Volume type can be changed (e.g. gp2 to io1)(all combinatios is not possible, there is some restriction)
+
+- Volume types:
+  - SDD Based (IOPS)
+    - io1 -> I/O intensive performance 
+    - gp2 -> Predictable baseline and burst performance
+  - HDD Based (Throughput)
+    - st1 -> Consistent high throughput
+    - sc1 -> Colder log processing
+
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 - Size of VPC can be defined by using IP address range
 - subnet -> Splitting the IP address of the VPC
