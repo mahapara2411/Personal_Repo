@@ -60,30 +60,55 @@ Ref:
 - Regions and availability zone
 
 ---------------AMI (Amazon Machine Images)---------------------
+
 - AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch the instance
 
 ---------------EBS (Elastic Block Storage)----------------------
-- Block storage for use with EC2
-- Similar to External harddisk attached to a server
-- Availability zone specific
-- Can be linked or delinked to any server within the same availability zone
-- Amazon itself creates a replica of EBS in the same availability zone (e.g. Mumbai has 2 Az's, Az 'A' is having the EBS, its replica will be created by Amazon)
-- It can be moved to other Az by creating its snapshot and moving it to that Az
-- EBS Volume can be increased but cannot be decreased, take a snapshot and create a vplume for this snapshot.
-- Volume type can be changed (e.g. gp2 to io1)(all combinatios is not possible, there is some restriction)
 
-- Volume types:
-  - SDD Based (IOPS)
-    - io1 -> I/O intensive performance 
-    - gp2 -> Predictable baseline and burst performance
-  - HDD Based (Throughput)
-    - st1 -> Consistent high throughput
-    - sc1 -> Colder log processing
+Ref:
+ - https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html
+ - https://www.youtube.com/watch?v=usOv-5_hzu0&t=22s (YouTube)
 
+ - Block storage for use with EC2
+ - Similar to External harddisk attached to a server
+ - Availability zone specific
+ - Can be linked or delinked to any server within the same availability zone
+ - Amazon itself creates a replica of EBS in the same availability zone (e.g. Mumbai has 2 Az's, Az 'A' is having the EBS, its replica will be created by Amazon)
+ - It can be moved to other Az by creating its snapshot and moving it to that Az
+ - EBS Volume can be increased but cannot be decreased, take a snapshot and create a vplume for this snapshot.
+ - Volume type can be changed (e.g. gp2 to io1)(all combinatios is not possible, there is some restriction)
+
+ - Volume types:
+ 1. Solid state drive (SSD) volumes:
+     - General Purpose SSD 
+        - gp2 (volume size -> 1 GiB - 16 TiB)
+        - gp3
+     - Provisioned IOPS SSD
+        - io2 Block Express 3 (volume size -> 4 GiB - 64 TiB 4)
+        - i01 (volume size -> (volume size -> 4 GiB - 16 TiB)
+ 2. Throughput Optimized HDD and Cold HDD volumes
+     - st1 -> Consistent high throughput
+     - sc1 -> Colder log processing
+     
+ - How to Increase the volume of the EBS in AWS EC2:
+    1. Take Snapshot of EBS Volume
+       - Select the Instance ->Go to Actions ->Create snapshot
+    2. Increase EBS Volume size in AWS console
+       - Select the Instance ->Go to Modify Volume ->Increase the size
+    3. Extend a linux file system after resizing a Volume
+
+   - Command to Extend the File system:
+      - df -hT
+      - sudo lsblk (Check whether the Volume has a partition)
+      - sudo growpart /dev/xvda/1 (Extend the partition)
+      - sudo xfs_growfs -d / (For XFS File system) (Extend the file system on /:)
+      - sudo resize2fs /dev/xvda1 (For Ext4 File system)
+      
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
-- Size of VPC can be defined by using IP address range
-- subnet -> Splitting the IP address of the VPC
-- Inside VPC - Internet gateway - Public subnet- Elastic Load balancer (ELB) (Sends the request to private subnet) - Router Table - Security group - Private subnet
-- NACL - 
-- NAT Gateway - Helps to download resource from Internet and masks the IP address. It is cretaed in the Public subnet
-- SNAT - 
+
+ - Size of VPC can be defined by using IP address range
+ - subnet -> Splitting the IP address of the VPC
+ - Inside VPC - Internet gateway - Public subnet- Elastic Load balancer (ELB) (Sends the request to private subnet) - Router Table - Security group - Private subnet
+ - NACL - 
+ - NAT Gateway - Helps to download resource from Internet and masks the IP address. It is cretaed in the Public subnet
+ - SNAT - 
