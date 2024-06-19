@@ -11,29 +11,30 @@
  - Roles: Collection of policies for AWS services.
 
 --------------EC2 (ELASTIC CLOUD COMPUTE)-----------------------
-Ref: https://aws.amazon.com/ec2/instance-types/?gclid=Cj0KCQjw97SzBhDaARIsAFHXUWC59MDXwZjF0-rihCpL0Kmo7C6uH4L97mLq9FB7yeqUGFGmTfxsqe0aAihgEALw_wcB&trk=32f4fbd0-ffda-4695-a60c-8857fab7d0dd&sc_channel=ps&ef_id=Cj0KCQjw97SzBhDaARIsAFHXUWC59MDXwZjF0-rihCpL0Kmo7C6uH4L97mLq9FB7yeqUGFGmTfxsqe0aAihgEALw_wcB:G:s&s_kwcid=AL!4422!3!476942910367!p!!g!!ec2!11539707735!118057054208
-- It is a Virtual server
+Ref: 
+ - https://aws.amazon.com/ec2/instance-types/?gclid=Cj0KCQjw97SzBhDaARIsAFHXUWC59MDXwZjF0-rihCpL0Kmo7C6uH4L97mLq9FB7yeqUGFGmTfxsqe0aAihgEALw_wcB&trk=32f4fbd0-ffda-4695-a60c-8857fab7d0dd&sc_channel=ps&ef_id=Cj0KCQjw97SzBhDaARIsAFHXUWC59MDXwZjF0-rihCpL0Kmo7C6uH4L97mLq9FB7yeqUGFGmTfxsqe0aAihgEALw_wcB:G:s&s_kwcid=AL!4422!3!476942910367!p!!g!!ec2!11539707735!118057054208
+ - It is a Virtual server
 
-- Types of EC2 Instances:
-- General Purpose
+ - Types of EC2 Instances:
+ - General Purpose
    - Provide a balance of compute, memory and networking resources
    - Ideal for applications that use these resources in equal proportions such as web servers and code repositories.
    - consists of M and T family Instances
-- Compute optimized
+ - Compute optimized
    - Ideal for compute bound applications that benefit from high performance processors.
    - High performance computing (HPC), batch processing, ad serving, video encoding, gaming, scientific modelling, distributed analytics, and CPU-based machine learning inference.
    - Consists of C Family Instances
-- Memory optimized
+ - Memory optimized
    - deliver fast performance for workloads that process large data sets in memory
    - Consists of R, X and U Family Instances
-- Storage optimized
+ - Storage optimized
    - designed for workloads that require high, sequential read and write access to very large data sets on local storage
    - Consists of I,D and H family Instances
-- Accelerated computing
+ - Accelerated computing
    - use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs
    - Consists of P,G,T,I,D,F,V Family Instances
 
-- Instance States:
+ - Instance States:
    - Stop
    - Start
    - Terminate
