@@ -1,0 +1,21 @@
+
+
+Ref:
+ - https://www.jenkins.io/doc/book/installing/linux/
+
+Installation_Amazon_Linux_Machine:
+       yum update -y
+    7  sudo yum install java-11-amazon-corretto-headless
+    9  java -version
+   11  find /usr/lib/jvm/java* | head -n 3
+   12  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   13  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+   14  sudo yum upgrade
+   15  sudo yum install jenkins
+   16  sudo systemctl daemon-reload
+   17  sudo systemctl enable jenkins
+   18  sudo systemctl start jenkins
+   19  sudo systemctl status jenkins
+   20  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   21  systemctl status jenkins
+   22  systemctl status jenkins | grep -i active
