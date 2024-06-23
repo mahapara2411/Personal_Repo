@@ -4,7 +4,7 @@ JDK is required
 ---
 Java -version
 yum install java-1.8*
-find /usr/lib/jvm/java-1.8* | head -n 3 -> command to check java home path
+find /usr/lib/jvm/java-1.8* | head -n 3 or which java -> command to check java home path
 vi .bash_profile  ->Inside this set the path of the java home page
 JAVA_HOME=<path of the JDK>
 PATH=$PATH:$HOME/bin:$JAVA_HOME
