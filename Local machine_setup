@@ -2,6 +2,9 @@ Maven setup in local and linux:
 Prerequisite:
 JDK is required
 ---
+Ref: 
+ - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/amazon-linux-install.html
+
 Java -version
 yum install java-1.8*
 find /usr/lib/jvm/java-1.8* | head -n 3 or which java -> command to check java home path
