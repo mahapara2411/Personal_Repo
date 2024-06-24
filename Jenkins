@@ -19,3 +19,6 @@ Pre-requisite: Java must be Installed in the linux machine
   -sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   -systemctl status jenkins
   -systemctl status jenkins | grep -i active
+
+ By default, Jenkins stores all of its data in this directory on the file system
+  - /var/lib/jenkins
