@@ -11,10 +11,12 @@ ls -i -> To check the inode value of file/dir
 cd ->change Directory, cd <dirname/>
 pwd ->Print corrent working directory
 mkdir ->create new directory, mkdir <dirname>
-rm -> Remove file and directory, rm -rf <filename> {remove,force removal}
-cp ->Copy files and directorie, cp <file1> <file2>
+rm -> Remove file and directory, rm -rf <filename> {remove,force removal} 
+ - e.x. rm -rf <filepath>* , rm -rf efs/foldername/*
+cp ->Copy files and directorie, cp <file1> <file2> 
+  -e.x. cp -r <file1> <file2>
 mv -> Move files and directorie, mv <source> <Destination> 
-e.g. mv file1 file2 file3 newdir
+  -e.x. mv file1 file2 file3 newdir
 touch -> Create an empty file, touch <filename>
 cat -> View the contents of the file, cat <filename>
 vi -> Is to edit the content of the file, vi <filename>, click on I (insert), write someting, :wq
