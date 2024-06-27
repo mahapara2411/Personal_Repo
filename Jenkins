@@ -37,7 +37,8 @@ Build Triggers in Jenkins:
       - Not ideal for continuously building software projects
       - 
   - GitHub hook trigger for GITScm polling
-      - 
+      - When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether the hook came from a GitHub repository which matches the Git repository defined in SCM/Git section of this job
+      - If it is enabled GitHub Plugin triggers a one-time polling on GITScm
   - Poll SCM
       - Configure Jenkins to poll changes in SCM.
       - expensive operation for CVS, as every polling requires Jenkins to scan the entire workspace and verify it with the server
