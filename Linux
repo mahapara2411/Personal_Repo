@@ -42,15 +42,18 @@ man -> It is short term for manual page, man ls -> It will list down all the inf
 
 -----------------------CRON JOB---------------------------
 
-* : MINUTE
-* : HOUR
-* : DOM
-* : MONTH
-* : DOW
+|------------------------------- Minute (0-59)
+|     |------------------------- Hour (0-23)
+|     |     |------------------- Day of the month (1-31)
+|     |     |     |------------- Month (1-12; or JAN to DEC)
+|     |     |     |     |------- Day of the week (0-6; or SUN to SAT; or 7 for Sunday)
+|     |     |     |     |
+|     |     |     |     |
+*     *     *     *     *
 
 EX:
- - * 8 * : 
- - 
+ - * * * * *: the job runs every minute
+ - * 0 1 1 1: the job runs every minute of the midnight hour on January 1st and Mondays.
 
 -----------------------File Permission Commands----------------------------------:
 
