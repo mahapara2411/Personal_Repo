@@ -24,3 +24,17 @@ Pre-requisite: Java must be Installed in the linux machine
 
  By default, Jenkins stores all of its data in this directory in the file system
   - /var/lib/jenkins
+
+Build Triggers in Jenkins:
+  - Trigger builds remotely (e.g. from scripts)
+      - Trigger new builds by accessing a special predefined URL (convenient for scripts)
+      - This is most useful when your Jenkins instance grants read access to this job to anonymous users.
+  - Build after other projects are built
+      - Set up a trigger so that when some other projects finish building, a new build is scheduled for this project.
+      - convenient for running an extensive test after a build is complete
+  - Build periodically
+      - Provides a cron -like feature to periodically execute this project.
+      - Not ideal for continuously building software projects
+      - 
+  - GitHub hook trigger for GITScm polling
+  - Poll SCM
