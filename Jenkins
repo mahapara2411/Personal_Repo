@@ -55,3 +55,11 @@ Type of Parameterization in Jenkins:
 
 How to access remote server using ssh:
 - Publish over SSH (Plugin)
+
+For Integrating maven
+  - Maven Integration (plugin)
+  - Maven Invoker
+
+For Integrating Ansible
+  - Ansible plugin
+
