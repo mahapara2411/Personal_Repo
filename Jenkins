@@ -53,6 +53,13 @@ Type of Parameterization in Jenkins:
   - Run Parameter
   - String Parameter
 
+Types of job in Jenkins:
+  - Freestyle project
+  - Pipeline
+  - Multi configuration project
+  - Folder
+  - Multibranch Pipeline
+
 How to access remote server using ssh:
 - Publish over SSH (Plugin)
 
@@ -62,4 +69,6 @@ For Integrating maven
 
 For Integrating Ansible
   - Ansible plugin
+
+
 
