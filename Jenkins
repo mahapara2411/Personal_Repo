@@ -1,3 +1,8 @@
+JENKINS PROJECTS:
+ - https://www.youtube.com/watch?v=Yk7k3yEguQA :Git | Jenkins | Nexus | SonarQube | HandsOn Lab - I
+ - https://www.youtube.com/watch?v=MpRd_nJEx_8&t=1950s :Git | Jenkins | Nexus | SonarQube |
+
+===============================================================================================
 Ref:
  - https://www.jenkins.io/doc/book/installing/linux/
 
@@ -35,7 +40,6 @@ Build Triggers in Jenkins:
   - Build periodically
       - Provides a cron -like feature to periodically execute this project.
       - Not ideal for continuously building software projects
-      - 
   - GitHub hook trigger for GITScm polling
       - When Jenkins receives a GitHub push hook, GitHub Plugin checks to see whether the hook came from a GitHub repository which matches the Git repository defined in SCM/Git section of this job
       - If it is enabled GitHub Plugin triggers a one-time polling on GITScm
