@@ -52,3 +52,6 @@ Type of Parameterization in Jenkins:
   - Password Parameter
   - Run Parameter
   - String Parameter
+
+How to access remote server using ssh:
+- Publish over SSH (Plugin)
