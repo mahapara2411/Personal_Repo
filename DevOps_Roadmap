@@ -1,17 +1,21 @@
 CI/CD Pipeline tutorial url : https://www.youtube.com/watch?v=jZYrxk2WMbY&t=1s
 Github merge and rebase : https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 
+CI :
 1. Linux
 2. Git & GitHub / Bitbucket
 3. Jenkins / CircleCI / Bamboo - CI
 4. Maven / Gradle - Build tool 
+10. Nexus / Jfrog - Artifactory Repo
+11. SonarQube - Code Quality analysis
+
+CD :
 5. Ansible / Chef / Puppet - Configuration mgmt tool
 6. Docker - Containerisation tool
 7. Kubernetes - Container Orchestration tool
 8. Prometheus & Grafana - Monitoring tool
 9. Terraform - Infrastructure as a tool (IAC)
-10. Nexus / Jfrog - Artifactory Repo
-11. SonarQube - Code Quality analysis
+
 
 ---- CLOUD ----
 AWS
