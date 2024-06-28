@@ -175,6 +175,12 @@ cd /root/.ssh
 vi authorized_keys <paste the public key>
 To see public ip of host machine: curl ifconfig.me
 
+(or) without password:
+ssh-keygen
+ssh-copy-id <servername>@<ip_address>
+ssh <servername>@<ip_address> -> To connect to different server
+
+
 --------------------------sed and awk command--------------------------------:
 sed -> stream editor that allows users to perform basic text transformations. Insertion, deletion, search and replace(substitution).
 e.g unix is great os. 
