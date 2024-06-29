@@ -75,5 +75,29 @@ For Integrating maven
 For Integrating Ansible
   - Ansible plugin
 
+Jenkins Pipeline:
+  - 
+
+Types of Pipeline:
+  - Declarative
+  - Scripted
+
+Pipeline syntax:
+  - scripted
+      - e.g.: node {
+              //groovy script
+              }
+
+  - Declarative
+      - e.g.: Pipeline {
+                        agent any
+                        stages {
+                                stage ("build"){
+                                       steps {
+                                       }
+                                }
+                        }
+
+
 
 
