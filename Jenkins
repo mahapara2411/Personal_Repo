@@ -77,7 +77,7 @@ For Integrating Ansible
 
 Jenkins Pipeline:
   - 
-  - Pipeline plugin is required
+  - Pipeline plugin, Pilepile Maven Integration pipeline is required
 
 Types of Pipeline:
   - Declarative
