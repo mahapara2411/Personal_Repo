@@ -5,6 +5,7 @@ JENKINS PROJECTS:
 ===============================================================================================
 Ref:
  - https://www.jenkins.io/doc/book/installing/linux/
+ - https://www.jenkins.io/doc/developer/plugin-development/dependency-management/
 
 Installation_Amazon_Linux_Machine:
 
