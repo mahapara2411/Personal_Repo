@@ -109,10 +109,14 @@ Post build actions in Jenkinsfile:
   - Failure
   - e.g.: Pipeline {
                         agent any
+                        environment  {
+                           NEW_VERSION == '1.2.0'  {Defining environmental variables in jenkinsfile}
+                        }
                         stages {
                                 stage ("build"){
                                        steps {
                                             echo 'building the application'
+                                            echo "building version ${NEW_VERSION}"
                                        }
                                  }
                                  stage ("test"){
@@ -128,6 +132,11 @@ Post build actions in Jenkinsfile:
                                  stage ("deploy"){
                                        steps {
                                             echo 'deploying the application'
+                                            withCredentials([                  {Defining credentials in Jenkinsfile}
+                                                usernamePassword(credentials: 'server_credentials', usernameVariable: 'USER', PasswordVariable: 'PWD'
+                                            ]){ 
+                                                sh "some script ${USER} ${PWD}"
+                                             }
                                        }
                                  }
                           }
@@ -138,7 +147,12 @@ Post build actions in Jenkinsfile:
                               success{
                               }
                            }    
-           }             
+           }  
+
+Using credentials in Jenkinsfile:
+  - credentials ("credentialid) binds the credentials to the env variable
+  - credentials plugin and credentials biding plugin is required
+
 
 ------------------------------------------------------------------
 
