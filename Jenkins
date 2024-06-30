@@ -153,6 +153,10 @@ Using credentials in Jenkinsfile:
   - credentials ("credentialid) binds the credentials to the env variable
   - credentials plugin and credentials biding plugin is required
 
+Types of Parameters:
+  - string (name, defaultValue, description)
+  - choices (name, choices, description)
+
 
 ------------------------------------------------------------------
 
