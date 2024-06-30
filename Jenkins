@@ -102,6 +102,44 @@ Pipeline syntax:
                                        }
                                 }
                         }
+
+Post build actions in Jenkinsfile:
+  - always
+  - success
+  - Failure
+  - e.g.: Pipeline {
+                        agent any
+                        stages {
+                                stage ("build"){
+                                       steps {
+                                            echo 'building the application'
+                                       }
+                                 }
+                                 stage ("test"){
+                                       when {
+                                           expression {
+                                                 BRANCH_NAME == 'dev' || BRANCH_NAME == 'master'  {Define conditionals/when expression)
+                                            }
+                                       }
+                                       steps {
+                                            echo 'testing the application'
+                                       }
+                                 }
+                                 stage ("deploy"){
+                                       steps {
+                                            echo 'deploying the application'
+                                       }
+                                 }
+                          }
+                          post {
+                              always {
+                                  // command 
+                              }
+                              success{
+                              }
+                           }    
+           }             
+
 ------------------------------------------------------------------
 
 Jenkins Master, slave concept:
