@@ -107,7 +107,21 @@ Ref:
       - sudo resize2fs /dev/xvda1 (For Ext4 File system)
 
 ------------------EFS (Elastic File System)---------------------
-- 
+- File-level, fully managed, storage provided by AWS
+- can be accessed by multiple EC2 instances concurrently
+- Designed for high throughput and low latency applications
+- Resources that can be mount on EFS:
+  - Amazon EC2.
+  - Amazon ECS.
+  - Amazon EKS.
+  - AWS Fargate.
+  - AWS lambda 
+- Different Performance Modes in EFS:
+  - General-purpose
+  - Max I/O
+- Different Throughput Modes in EFS:
+  - Bursting -> Allows 100MBPS of burst speed per TB of storage
+  - Enhanced -> Max burst speed of the EFS can be decided by user but will be charged more
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
