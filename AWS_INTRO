@@ -122,6 +122,8 @@ Ref:
 - Different Throughput Modes in EFS:
   - Bursting -> Allows 100MBPS of burst speed per TB of storage
   - Enhanced -> Max burst speed of the EFS can be decided by user but will be charged more
+
+--------------------S3 (Simple storage service)---------------------
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
