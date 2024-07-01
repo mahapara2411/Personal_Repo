@@ -124,6 +124,11 @@ Ref:
   - Enhanced -> Max burst speed of the EFS can be decided by user but will be charged more
 
 --------------------S3 (Simple storage service)---------------------
+- Object storage - Flat structure
+- API access to data
+- Metadata driven (Attributes, policy)
+- For storing pictures and videos
+- Can be accessed from any region over Internet
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
