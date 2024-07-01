@@ -105,6 +105,9 @@ Ref:
       - sudo growpart /dev/xvda/1 (Extend the partition)
       - sudo xfs_growfs -d / (For XFS File system) (Extend the file system on /:)
       - sudo resize2fs /dev/xvda1 (For Ext4 File system)
+
+------------------EFS (Elastic File System)---------------------
+- 
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
