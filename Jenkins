@@ -107,6 +107,7 @@ Post build actions in Jenkinsfile:
   - always
   - success
   - Failure
+  - Cleanup
   - e.g.: Pipeline {
                         agent any
                         environment  {
