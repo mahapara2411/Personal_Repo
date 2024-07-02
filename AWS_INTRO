@@ -77,7 +77,7 @@ Ref:
  - Can be linked or delinked to any server within the same availability zone
  - Amazon itself creates a replica of EBS in the same availability zone (e.g. Mumbai has 2 Az's, Az 'A' is having the EBS, its replica will be created by Amazon)
  - It can be moved to other Az by creating its snapshot and moving it to that Az
- - EBS Volume can be increased but cannot be decreased, take a snapshot and create a vplume for this snapshot.
+ - EBS Volume can be increased but cannot be decreased, take a snapshot and create a volume for this snapshot.
  - Volume type can be changed (e.g. gp2 to io1)(all combinatios is not possible, there is some restriction)
 
  - Volume types:
@@ -106,6 +106,12 @@ Ref:
       - sudo xfs_growfs -d / (For XFS File system) (Extend the file system on /:)
       - sudo resize2fs /dev/xvda1 (For Ext4 File system)
 
+   - Use case:
+     - Low Latency access to data
+     - Relations and NoSQL database storage
+     - Data warehouse ETL
+     - E.x. SAP ERP, Oracle ERP, MongoDB, MYSQL
+
 ------------------EFS (Elastic File System)---------------------
 - File-level, fully managed, storage provided by AWS
 - can be accessed by multiple EC2 instances concurrently
@@ -123,12 +129,26 @@ Ref:
   - Bursting -> Allows 100MBPS of burst speed per TB of storage
   - Enhanced -> Max burst speed of the EFS can be decided by user but will be charged more
 
+- Use case:
+  - shared access to files
+  - Web serving
+  - Big data and analytics
+  - Content Management
+  - Container storage
+
 --------------------S3 (Simple storage service)---------------------
 - Object storage - Flat structure
 - API access to data
 - Metadata driven (Attributes, policy)
 - For storing pictures and videos
 - Can be accessed from any region over Internet
+
+- Use Case:
+  - Unlimited space
+  - Media and Entertainment e.g. Images, videos
+  - Log files
+  - Backup and archives
+  - Version Control System
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
