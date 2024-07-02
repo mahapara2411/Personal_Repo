@@ -155,6 +155,9 @@ Ref:
   - Throughput: How fast storage can read/write data e.x. 10 MB/s
   - Latency: Time delay between request of data and response of data
 
+- Cost:
+  - S3 < EBS < EFS
+
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
