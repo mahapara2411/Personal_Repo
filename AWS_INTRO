@@ -137,6 +137,8 @@ Ref:
   - Container storage
 
 --------------------S3 (Simple storage service)---------------------
+Ref: https://www.simplilearn.com/tutorials/aws-tutorial/aws-s3
+
 - It is Object storage service which provides scalability, data availability, security, and performance.- Flat structure
 - API access to data
 - Metadata driven (Attributes, policy)
