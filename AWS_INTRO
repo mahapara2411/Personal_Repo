@@ -179,6 +179,23 @@ Ref:
     - For frequently accessed data
     - stores data which is non-critical and reproduced quickly
 
+- S3 Lifecycle Management:
+  - Transaition Action
+    - Objects can be moved to another storage class 
+  - Expiration Action
+    - Removes all objects within the bucket when a specified date or time period in the object’s lifetime is reached
+
+- Bucket Policy:
+  - Bucket policy is an IAM policy
+  - Allows or denies access to the resource
+
+- Data Protection:
+  - Amazon S3 protects your data using methods: 
+    - Data encryption
+    - Versioning
+    - Cross-region Replication
+    - Transfer Acceleration
+
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
 
