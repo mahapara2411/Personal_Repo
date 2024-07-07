@@ -137,7 +137,7 @@ Ref:
   - Container storage
 
 --------------------S3 (Simple storage service)---------------------
-- Object storage - Flat structure
+- It is Object storage service which provides scalability, data availability, security, and performance.- Flat structure
 - API access to data
 - Metadata driven (Attributes, policy)
 - For storing pictures and videos
@@ -157,6 +157,27 @@ Ref:
 
 - Cost:
   - S3 < EBS < EFS
+
+- Types of Amazon S3 Storage Classes:
+  - Amazon S3 Standard for frequent data access
+    - For frequently accessed data
+    - Default storage
+    - used for cloud appln, gaming appln, Big data analytics
+  - Amazon S3 Standard for infrequent data access
+    - For long lived data and infrequent accessed data
+    - Demands rapid access
+    - Suitabl efor backup, disaster recovery, and lifelong storage of data
+  - Amazon Glacier
+    - For archiving data and high performance is not required
+    - Vault-lock feature provides long term storage of data
+    - Provides lowest cost availability
+  - One Zone-IA Storage Class
+    - For infrequently accessed data
+    - Stores data in single AWS AZ
+    - Data which does not require high level of security can be stored here
+  - Amazon S3 Standard Reduced Redundancy storage
+    - For frequently accessed data
+    - stores data which is non-critical and reproduced quickly
 
       
 --------------VPC (VIRTUAL PRIVATE CLOUD)----------------------
