@@ -18,6 +18,11 @@
   - Has everything need to run an app
   - OS, App Code, software
 
+- Docker Registeries:
+  - Highly scalable server side appln that stores and distributes the docker images
+  - Used in CI/CD pipeline
+  - Runs the application
+
 - Containers:
   - Running Instance of an Image
 
