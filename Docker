@@ -52,4 +52,5 @@
   - docker ps -aq -> To retrieve every single container id
   - docker rm $(docker ps -aq) -> To remove every single container
   - docker run --name <website> -d -p 8080:80 -p 3000:80 nginx:latest -> To name the container as "website"
-  - docker insoect <container_name/container_id> -> To inspect the containers in detail
+  - docker inspect <container_name/container_id> -> To inspect the containers in detail
+  - docker exce -it <Container_id>  /bin/sh -> To get inside container
