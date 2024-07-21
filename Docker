@@ -18,7 +18,7 @@
   - Has everything need to run an app
   - OS, App Code, software
 
-- Docker Registeries/ Amazon ECR (Elastic container Registery):
+- Docker Registeries/ Amazon ECR (Elastic container Registery)/ Docker Hub:
   - Highly scalable server side appln that stores and distributes the docker images
   - Used in CI/CD pipeline
   - Runs the application
@@ -97,3 +97,24 @@ E.x. services:
            - .:/code
       redis:
          image: redis
+
+- Docker Cache and Layers:
+  - When building an image from scratch, Docker creates layers to make the successive deployments and builds efficient. 
+  - Each layer is a diff/delta from the previous layer that was built before it.
+  - Each line in this Dockerfile is a Docker layer and if not changed will be reused from the cached layers in later builds.
+  - Both adding and removing files will result in a new layer
+  - E.x. 
+    FROM node:12-alpine
+    RUN apk add --no-cache python2 g++ make
+    WORKDIR /app
+    COPY . .
+    RUN yarn install --production
+    CMD ["node", "src/index.js"]
+    EXPOSE 3000
+
+- Advantages of using Docker Layers
+  - Good storage management
+  - Faster builds
+  - Faster deployments
+  - Sharing across multiple containers
+  - Enhanced scalability
