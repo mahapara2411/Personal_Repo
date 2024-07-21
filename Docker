@@ -118,3 +118,6 @@ E.x. services:
   - Faster deployments
   - Sharing across multiple containers
   - Enhanced scalability
+
+- Docker Network:
+  - 
