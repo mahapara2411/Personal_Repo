@@ -18,13 +18,22 @@
   - Has everything need to run an app
   - OS, App Code, software
 
-- Docker Registeries:
+- Docker Registeries/ Amazon ECR (Elastic container Registery):
   - Highly scalable server side appln that stores and distributes the docker images
   - Used in CI/CD pipeline
   - Runs the application
 
 - Containers:
   - Running Instance of an Image
+
+- Difference between Container vs VM(Virtual machine)
+  - Containers:
+    - Containers are an abstraction at the app layer that packages code & dependecies together. 
+    - Multiple containers can run on the same machine & share the OS Kernel with other container. 
+  - VM:
+    - It is an abstraction of physical server turning one server into multiple servers.
+    - Each VM includes full copy of an OS system / Dedicated OS, necessary binaries & libraries- taking up ten's of GB's
+    - Slow to boot. 
 
 - Docker volumes:
   - Allow sharing of date (files,folders)
@@ -41,16 +50,20 @@
   - docker ps -a -> containers that are currently running or have run in the past
   - docker pull <nginx>
   - docker images -> Lists down the available Images
+  - docker rmi <image_name> -> To remove Image
   - docker run nginx:latest -> To run containers
   - docker run -d nginx:latest -> To run containers in detached mode
   - docker container ls -> To list the running containers
   - docker stop <Container_id/ Container_name> -> To stop the running container
   - docker start <Container_id/ Container_name>
-  - docker run -d -p 8080:80 nginx:latest -> To expose external port, Map local host 8080 to port 80 inside of the container
-  - docker run -d -p 8080:80 -p 3000:80 nginx:latest -> To expose multiple ports
   - docker rm <Container_id/ Container_name> / docker rm  -f <Container_id/ Container_name> -> To remove the container / To remove the container forcefully
   - docker ps -aq -> To retrieve every single container id
   - docker rm $(docker ps -aq) -> To remove every single container
   - docker run --name <website> -d -p 8080:80 -p 3000:80 nginx:latest -> To name the container as "website"
-  - docker inspect <container_name/container_id> -> To inspect the containers in detail
+  - docker inspect <container_name/container_id> -> To inspect the containers in detail like IP, volume, network, env path etc (low level informations)
+  - docker logs -f <container_name> -> To view the logs of the container. 
   - docker exce -it <Container_id>  /bin/sh -> To get inside container
+
+- To Expose Ports (single/multiple):
+  - docker run -d -p 8080:80 nginx:latest -> To expose external port, Map local host 8080 to port 80 inside of the container
+  - docker run -d -p 8080:80 -p 3000:80 nginx:latest -> To expose multiple ports
