@@ -119,5 +119,37 @@ E.x. services:
   - Sharing across multiple containers
   - Enhanced scalability
 
+- DockerFile:
+  - Dockerfile is a simple text file that consists of instructions to build Docker images.
+  - FROM -> To pull the base image
+    RUN -> To execute Commands
+    CMD -> To Provide defaults for an executing container
+    ENTRYPOINT -> To configure a container that will run as an executable
+    WORKDIR -> To set the working directory
+    COPY -> To copy a directory from a local machine to the docker container
+    ADD -> To copy files and folders from a local machine to the docker container (or) to get the package from the internet (wget command)
+    EXPOSE -> Informs docker that container listens on the specified network port at runtime
+    ENV -> To set env variable
+  - E.x. 
+    - Install Tomcat on Centos:
+      - Pull centos from Dockerhub                - FROM
+      - Install Java                              - RUN
+      - Create /opt/tomcat directory              - RUN
+      - Change working directory to /opt/tomcat   - WORKDIR
+      - Download Tomcat Package                   - ADD/ RUN      
+      - Extract tar.gz file                       - RUN
+      - Rename to Tomcat directory                - RUN
+      - Tell to docker that it runs on Port 8080  - EXPOSE
+      - Start Tomcat service                      - CMD
+ - FROM centos:latest
+ - RUN yum install java -y
+ - RUN mkdir /opt/tomcat
+ - WORKDIR /opt/tomcat
+ - ADD <Tomcat package download url>
+ - RUN tar -xvzf apache-tomcat-9.0.54.tar.gz
+ - RUN mv apache-tomcat-9.0.54/* /opt/tomcat
+ - EXPOSE 8080
+ - CMD ["/opt/tomcat/bin/catalina.sh"]
+
 - Docker Network:
   - 
