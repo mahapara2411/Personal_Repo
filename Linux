@@ -4,13 +4,13 @@ Linux is a Kernal and Open-source UNIX like OS.
 LINUX COMMANDS:
 ------------------File and Directory Operations Commands-----------------------:
 
-ls ->List files and directories
-ls -ltrh -> Detailed info of thr file with time and human redable format
+ls -> List files and directories
+ls -ltrh -> Detailed info of the file with time and human readable format
 ls -a -> shows the hidden files
-ls -i -> To check the inode value of file/dir
-cd ->change Directory, cd <dirname/>
-pwd ->Print corrent working directory
-mkdir ->create new directory, mkdir <dirname>
+ls -i -> To check the i-node value of file/dir
+cd -> change Directory, cd <dirname/>
+pwd -> Print current working directory
+mkdir -> create new directory, mkdir <dirname>
 rm -> Remove file and directory, rm -rf <filename> {remove,force removal} 
  - e.x. rm -rf <filepath>* , rm -rf efs/foldername/*
 cp ->Copy files and directorie, cp <file1> <file2> 
