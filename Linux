@@ -67,7 +67,7 @@ r: Read Permission ->4
 w: Write Permission ->2
 x: Execute Permission ->1
 
-chmod ->Change file permissions.
+chmod -> Change file permissions.
 e.g. chmod +rwx Filename
      chmod 774 (user,group,other) Filename
      chmod 664 Filename
@@ -75,7 +75,7 @@ e.g. chmod +rwx Filename
 chown -> Change File owner.
 e.g. chown <New owner> Filename
 
-chgrp ->Change group ownership.
+chgrp -> Change group ownership.
 e.g. chgrp <New group> Filename
 
 ------------------------Private and Public ip's----------------------:
@@ -133,13 +133,13 @@ e.g. sort <filename>
 
 scp (secure copy protocol) : It lets you share files and data securely and easily. SCP uses encryption over an SSH (Secure Shell) connection, this ensures that the data being transferred is protected from suspicious attacks.
 We are able to use SCP in the following cases:
-Copy files within same machine.
-Copy files from a local host to remote host and vice versa.
-Copy files between two different remote servers.
+ - Copy files within same machine.
+ - Copy files from a local host to remote host and vice versa.
+ - Copy files between two different remote servers.
 
 Pre-requisite for using scp:
-SSh installed on both the client and the server machines.
-Root access to both client and server machines.
+ - SSh installed on both the client and the server machines.
+ - Root access to both client and server machines.
 
 Curl: Used to fetch data/content from the url , or uploading files to the server/downloading files from the Internet
 e.g. curl https://www.geeksforgeeks.org
