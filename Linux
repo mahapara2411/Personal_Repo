@@ -182,13 +182,15 @@ ssh <servername>@<ip_address> -> To connect to different server
 
 
 --------------------------sed and awk command--------------------------------:
+Ref: https://www.youtube.com/watch?v=ixOiOS35HYg
+
 sed -> stream editor that allows users to perform basic text transformations. Insertion, deletion, search and replace(substitution).
 e.g unix is great os. 
 $sed 's/unix/linux/' geekfile.txt
 -- above statement will be replaced by unix is great os. 
 $sed 's/unix/linux/g' geekfile.txt -> Replacing all the occurance of the line
 
-awk -> Awk is mostly used for pattern scanning and processing.
+awk -> Awk is mostly used for pattern scanning and processing of text file-in particular data files that are organized by rows and columns
 e.g $ awk '{print}' employee.txt
 $ awk '{print, $2}' employee.txt ----> to print the second column
 NR -> Display field number
