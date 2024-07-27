@@ -42,11 +42,11 @@ Step-1: Install the Tomcat package
 - tar -xvf <tar.gz>
 
 Step 2:
-- find / -name contex.xml
+- find / -name context.xml
 
 Step 3:
-- /webapps/host-manager/META-INF/contex.xml (webapps folder)
-- /webapps/manager/META-INF/contex.xml
+- /webapps/host-manager/META-INF/context.xml (webapps folder)
+- /webapps/manager/META-INF/context.xml
 
  commented out <!--
   value 
