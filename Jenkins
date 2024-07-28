@@ -81,7 +81,7 @@ For Integrating Ansible
 
 Jenkins Pipeline:
   - A collection of plugins that helps implement and integrate continuous delivery (CD) pipelines into Jenkins
-  - Pipeline plugin, Pilepile Maven Integration plugin is required
+  - Pipeline plugin, Pipeline Maven Integration plugin is required
 
 Types of Pipeline:
   - Declarative (used mostly)
