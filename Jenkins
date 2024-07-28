@@ -152,7 +152,7 @@ Post build actions in Jenkinsfile:
 
 Using credentials in Jenkinsfile:
   - credentials ("credentialid) binds the credentials to the env variable
-  - credentials plugin and credentials biding plugin is required
+  - credentials plugin and credentials binding plugin is required
 
 Types of Parameters:
   - string (name, defaultValue, description)
