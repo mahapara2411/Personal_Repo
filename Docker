@@ -36,7 +36,7 @@
     - Slow to boot. 
 
 - Docker volumes:
-  - Allow sharing of date (files,folders)
+  - Allow sharing of data (files,folders)
   - Folder in physical host file system is mounted into the virtual file system of docker.
   - Between host and container
     - <Folder> pwd
