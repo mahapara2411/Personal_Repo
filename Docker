@@ -1,6 +1,7 @@
 - It's a software platform that allows to build, test, and deploy applications quickly
 - An operating system for containers
 - Containerize any application
+- a Docker container runs in the background of your terminal. It does not receive input or display output. Using detached mode also allows you to close the opened terminal session without stopping the container
 
 - Docker Architecture:
   - Docker Deamon: 
