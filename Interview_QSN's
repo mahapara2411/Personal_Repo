@@ -1,1 +1,25 @@
+--------: LINUX :-------------
+1. Application port is running or not ?
+ - command using 'netstat -lntp'
+ - ex- tomcat 8080,nginx 80
+
+2. Memory Check                                                       
+ - "TOP" Able to see the CPU Usages 
+ - "free -h" primary memory RAM Usages
+ - "df -h" secondary memory HDD Usages
+ - "du" directory memory check. 
+ - uptime: Load Average
+
+3. SOFT LINK VS HARD LINK & INODE IN LINUX:
+
+
+8. cron-job ?
+ - to run the script in a particular interval. 
+
+What is AWK & SED cmd
+Directory structore in linux
+Daily/10 cmds in linux
+How to check public IP, Private IP & Linux system version
+how to search file's in linux? use of Find & GREP cmd
+file permission & examples 
 
