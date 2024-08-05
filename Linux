@@ -85,7 +85,7 @@ Public ip: curl ifconfig.me
 
 ------------------------Memory and Harddisk--------------------------:
 
-Primary Memory -> free -m
+Primary Memory -> free -h
 Display all the processes -> ps -ef
 Secondary memory -> df -h
 cpu -> top
