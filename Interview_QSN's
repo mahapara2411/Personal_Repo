@@ -4,11 +4,11 @@
  - ex- tomcat 8080,nginx 80
 
 2. Memory Check                                                       
- - "TOP" Able to see the CPU Usages 
- - "free -h" primary memory RAM Usages
- - "df -h" secondary memory HDD Usages
- - "du" directory memory check. 
- - uptime: Load Average
+ - "TOP" Able to see the CPU Usages: 
+ - "free -h" primary memory RAM Usages:
+ - "df -h" secondary memory HDD Usages: 
+ - "du" directory memory check:
+ - uptime: Load Average: 
 
 3. SOFT LINK VS HARD LINK & INODE IN LINUX:
 Soft Link: It stores the path of the File and works as a shortcut to the file.
@@ -90,9 +90,10 @@ NF -> Display last field
  - find / -name <filename> 
 
 8. How to check public IP, Private IP & Linux system version
-Private ip: hostname -i
-Public ip: curl ifconfig.me
-Linux OS Version: cat /etc/os-release (or) hostnamectl (or) cat /etc/*release (or) cat /etc/*version 
+ - Private ip: hostname -i
+ - Public ip: curl ifconfig.me
+ - ifconfig: How to see the current ip address on linux?
+ - Linux OS Version: cat /etc/os-release (or) hostnamectl (or) cat /etc/*release (or) cat /etc/*version 
 
 9. How to search file's in linux? use of Find & GREP cmd
 Grep -> stands for Global Regular Expression Print
@@ -132,6 +133,20 @@ e.g. chown <New owner> Filename
 
 chgrp -> Change group ownership.
 e.g. chgrp <New group> Filename
+
+11. How to check kernel version of linux system?
+- uname -a
+
+14. How to see if a linux service is running?
+- redhat/fedora/centos/amazon linux : systemctl status <service-name>
+- ubuntu : service <service-name> status
+PACKAGE INSTALLATION:
+- redhat/fedora/centos/amazon linux : yum install git -y
+- ubuntu : apt-get install git -y
+
+
+
+16. 
 
 
 
