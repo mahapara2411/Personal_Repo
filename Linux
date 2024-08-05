@@ -187,7 +187,7 @@ Ref: https://www.youtube.com/watch?v=ixOiOS35HYg
 sed -> stream editor that allows users to perform basic text transformations. Insertion, deletion, search and replace(substitution).
 e.g unix is great os. 
 $sed 's/unix/linux/' geekfile.txt
--- above statement will be replaced by unix is great os. 
+-- above statement will be replaced by linux is great os. 
 $sed 's/unix/linux/g' geekfile.txt -> Replacing all the occurance of the line
 
 awk -> Awk is mostly used for pattern scanning and processing of text file-in particular data files that are organized by rows and columns
