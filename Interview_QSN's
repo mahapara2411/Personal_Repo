@@ -1,6 +1,6 @@
 --------: LINUX :-------------
 1. Application port is running or not ?
- - command using 'netstat -lntp'
+ - command using 'netstat -lntpu'
  - ex- tomcat 8080,nginx 80
 
 2. Memory Check                                                       
@@ -11,15 +11,117 @@
  - uptime: Load Average
 
 3. SOFT LINK VS HARD LINK & INODE IN LINUX:
+Soft Link: It stores the path of the File and works as a shortcut to the file.
+           If original file is moved/deleted the soft link gets deleted and the link will point to a non-existent file..
+           Inode value of both original file and soft link is different.
+           Soft link can be linked to a directory.
 
+ln  -s [original filename] [link name] 
 
-8. cron-job ?
+Hard Link: If original file is moved/deleted the hard link will still show the content of the file.
+           Inode value of both original file and hard link is same.
+           Hard link cannot be created for a directory to avoid recursive loops.
+
+ln  [original filename] [link name]
+
+An inode, or index node, is a file-based data structure in Linux that stores metadata for each file and directory in the file system. 
+Inodes are essential for the operating system to function properly.
+Inodes store metadata such as:
+File type
+File size
+Owner ID
+Group ID
+Read, write and execute permissions
+
+4. cron-job ?
  - to run the script in a particular interval. 
+|------------------------------- Minute (0-59)
+|     |------------------------- Hour (0-23)
+|     |     |------------------- Day of the month (1-31)
+|     |     |     |------------- Month (1-12; or JAN to DEC)
+|     |     |     |     |------- Day of the week (0-6; or SUN to SAT; or 7 for Sunday)
+|     |     |     |     |
+|     |     |     |     |
+*     *     *     *     *
 
-What is AWK & SED cmd
-Directory structore in linux
-Daily/10 cmds in linux
-How to check public IP, Private IP & Linux system version
-how to search file's in linux? use of Find & GREP cmd
-file permission & examples 
+Ex:
+ - * * * * *: the job runs every minute
+ - * 0 1 1 1: the job runs every minute of the midnight hour on January 1st and Mondays.
+
+5. What is AWK & SED command
+sed -> stream editor that allows users to perform basic text transformations. Insertion, deletion, search and replace(substitution).
+e.g unix is great os. 
+$sed 's/unix/linux/' geekfile.txt
+-- above statement will be replaced by linux is great os. 
+e.g. 2: $sed 's/unix/linux/2' geekfile.txt -> Replacing the nth occurrence of a pattern in a line 
+e.g. 3: $sed 's/unix/linux/g' geekfile.txt -> Replacing all the occurance of the line
+
+awk -> Awk is mostly used for pattern scanning and processing of text file-in particular data files that are organized by rows and columns
+e.g $ awk '{print}' employee.txt
+$ awk '{print, $2}' employee.txt ----> to print the second column
+NR -> Display field number
+NF -> Display last field
+
+6. Directory structure in linux
+/root -> for root user, root user can only create, del, modify anything
+/home -> This is for specific user, no other user can manipulate anything in this. e.g. /home/bulbul
+/bin (binaries) -> all the commands for all the user are available here
+/sbin (system binaries) -> commands available only for root users, used for performing major changes in the config file, or any system changes
+/dev (Device files) -> Interface between the hardware and software (hardware info and software info)
+/media
+/etc (editable text configuration) -> all the config files of the application is getting stored here
+/sys (System) -> hardware related info is getting stored here
+/lib (system libraries) -> libraries required to run the application
+/tmp (temporary files) 
+/usr (user program)
+/var (variable files) -> cache,logs,email files,backup files,spool
+/opt (optional application) -> third party tool 
+
+7. Daily/10 cmds in linux
+
+8. How to check public IP, Private IP & Linux system version
+Private ip: hostname -i
+Public ip: curl ifconfig.me
+Linux OS Version: cat /etc/os-release (or) hostnamectl (or) cat /etc/*release (or) cat /etc/*version 
+
+9. How to search file's in linux? use of Find & GREP cmd
+Grep -> stands for Global Regular Expression Print
+        To search text or strings in a file 
+     -v    ║ Shows all the lines except the searched one    ║ 
+     -c    ║ Displays only the count of matching lines      ║ 
+     -n    ║ Shows the matching line and its number.        ║ 
+     -i    ║ Match both (upper and lower) case.             ║ 
+     -l    shows just the name of the file with the string║
+e.g. Grep -i word <filename>
+
+
+Find -> Search the path of file or Directory
+e.g. find <path of file>, find /home/dir1/file1
+     find . -name <filename> -> To search in present directory
+     find / -name <filename> -> To search in entire filesystem
+     find . -name *.war -> To search a file
+
+10. File permission & examples 
+u: User/owner permissions.
+g: Group permissions.
+o: Other permissions.
++: Add permissions.
+–: Remove permissions.
+=: Set permissions explicitly.
+r: Read Permission ->4
+w: Write Permission ->2
+x: Execute Permission ->1
+
+chmod -> Change file permissions.
+e.g. chmod +rwx Filename
+     chmod 774 (user,group,other) Filename
+     chmod 664 Filename
+    
+chown -> Change File owner.
+e.g. chown <New owner> Filename
+
+chgrp -> Change group ownership.
+e.g. chgrp <New group> Filename
+
+
 
