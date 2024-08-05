@@ -78,6 +78,16 @@ NF -> Display last field
 /opt (optional application) -> third party tool 
 
 7. Daily/10 cmds in linux
+ - ls 
+ - ls -ltrh 
+ - cd <dirname/>
+ - rm -rf <filename> 
+ - cat <filename>
+ - vi <filename>
+ - free -h
+ - df -h
+ - Grep -i word <filename>
+ - find / -name <filename> 
 
 8. How to check public IP, Private IP & Linux system version
 Private ip: hostname -i
