@@ -118,46 +118,61 @@ PACKAGE INSTALLATION:
  - The difference between git stash pop vs git stash apply is that pop deletes the stash after files are moved into your working directory, 
    while apply does not
 
-2. What is Git Reset?
+3. What is Git Reset?
  - when we want to move the repository back to a specific commit, discarding any changes made after that commit.
  - git reset <commithash>
 
-3. What is Git Revert?
+4. What is Git Revert?
  - Reverts to a specified commit but keeps the history of every other commit made to the code base, 
    and creates a new commit for the reverted changes. 
  - git revert <commit ID>
 
-4. Difference between Git pull and Git clone?
+5. Difference between Git pull and Git clone?
  - Git clone copies all files to the local machine, while git pull only copies the modified files to the local machine
 
-5. What is the difference between Git pull and Fetch?
- - We use Git pull command to get changes from central repository. In this operation, internally two commands will get executed. One is Git fetch and another one is Git merge.
- - So Git pull is the combination of {Git pull & Git merge}.
- - Git fetch means, only bringing changes from central repo to local repo. But these changes will not be integrated to local repo which is there in your server.
- - Git merge means, merging changes to your local repository which is there in your server. Then only you can see these changes.
- 
-6. What is the difference between Git merge and rebase?
- - We often use these commands to merge code in multiple branches. Both are almost same but few differences. When you run Git merge, one new merge commit will be generated which is having the history of both development branches. 
- - It preserves the history of both branches. By seeing this merge commit, everyone will come to know that we merged two branches. 
- - If you do Git rebase, commits in new branch will be applied on top of base branch tip. 
- - There won’t be any merge commit here. It appears that you started working in one single branch form the beginning. 
- - This operation will not preserves the history of new branch.
+6. What is the difference between Git pull and Fetch?
+ - It fetches changes from the remote repository and automatically merges them into the current branch
+ - So Git pull is the combination of {Git fetch & Git merge}.
+ - git pull origin master 
+ - The "git fetch" command only retrieves changes from the remote repository but does not automatically merge them into the current branch.
+ - git fetch origin 
 
-7. What is Git Bisect?
+7. What is the difference between Git merge and rebase?
+ - Git merge keeps the commit sequence intact by combining the histories of the two branches into a single branch
+ - Git rebase, on the other hand, rewrites history by putting changes from one branch at the beginning of another, 
+   resulting in a more organized, linear project history
+
+8. What is Git Bisect?
  - Git Bisect we use to pick bad commit out of all good commits. 
  - Often developers do some mistakes. For them it is very difficult to pick that commit where mistake is there.
  - They go with building all commits one by one to pick bad commit. But Git bisect made their lives easy. Git bisect divides all commits equally in to two parts (bisecting equally). Now instead of building each commit, they go with building both parts. Where ever bad commit is there, that part build will be failed. We do operation many times till we get bad commit. So Git bisect allows you to find a bad commit out of good commits. You don’t have to trace down the bad commit by hand; git-bisect will do that for you.
 
-8. What is Git squash?
- - To move multiple commits into its parent so that you end up with one commit. If you repeat this process multiple times, you can reduce “n” number of commits to a single one. Finally we will end up with only one parent commit. We use this operation just to reduce number of commits.
- - git rebase -i 3
+9. What is Git squash?
+ - To combine multiple commits into one
+ - This technique is especially useful when a feature branch has numerous small, 
+   incremental commits that clutter the commit history.
+ - git merge --squash feature-branch
 
 10. What is Git cherry-pick?
- - When you go with git merge, all commits which are there in new development branch will be merged into current branch where you are. 
- - But sometimes, requirement will be in such that you would want to get only one commit form development branch instead of merging all commits. 
- - In this case we go with git cherry-pick. Git cherry-pick will pick only one commit whatever you select and merges with commits which are there in your current branch. 
- - So picking particular commit and merging into your current branch we call git cherry-pick.
+ - Cherry-picking in Git means choosing a commit from one branch and applying it to another.
+ - e.g. git cherry-pick <commit-hash>
+
 11. Git Branching strategy ?
+ - 1) Master Branch: It containes production code which is stable [ Active Development ]
+ - Always Up to date. 
+   
+ - 2) Development Branch: 
+ - Has Pre-Production code . (when we're assigned with new feature we can create a new feature branch frm dev branch, we can create a pull request and merged it with dev branch,and perticular feature branch will be deleted )
+
+ - 3) Feature Branch: 
+
+ - 4) Release Branch: [ Delivering code to the customer ]
+ - to support preparation of new prod release. 
+
+ - 5) Hot Fix Branch:  [Quick changes and delivery to customer]
+ - to patch prod releases.
+ - It should go both in master as well as release branch.
+
 12. Git stages ?
  - Working space
  - Staging Area
