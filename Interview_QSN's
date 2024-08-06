@@ -109,22 +109,26 @@ PACKAGE INSTALLATION:
 13. 
 =============================: GIT :=============================================
 1. What is Git stash?
- - We create multiple branches to work simultaneously on multiple features. But to work on multiple tasks simultaneously in one branch (i.e. on one feature), we use git stash. Stash is a temporary repository where we can store our content and bring it back whenever we want to continue with our work with that stored content.
- - It removes content inside file from working directory and puts in stashing store and gives clean working directory so that we can start new work freshly.
- - Later on you can bring back that stashed items to working directory and can resume your work on that file. Git stash applicable to modified files. Not new files. Once we finish our work, we can remove all stashed items form stash repository.
+ - Sometimes you want to switch the branches, but you are working on an incomplete part of your current project.
+ - Enables you to switch branches without committing the current branch.
+ - $ git stash  
+
+2. Difference between git statsh pop and apply?
+ - $ git stash pop/ $ git stash apply
+ - The difference between git stash pop vs git stash apply is that pop deletes the stash after files are moved into your working directory, 
+   while apply does not
 
 2. What is Git Reset?
- - Git Reset command is used to remove changes form staging area. This is bringing back file form staging area to work directory. We use this command before commit. Often we go with git add accidentally. In this case if we commit, that file will be committed. Once you commit, commit ID will be generated and it will be in the knowledge of everyone. So to avoid this one, we use Git reset.
- - If you add “–hard” flag to git reset command, in one go, file will be removed from staging area as well as working directory. We generally go with this one if we fell that something wrong in the file itself.
+ - when we want to move the repository back to a specific commit, discarding any changes made after that commit.
+ - git reset <commithash>
 
 3. What is Git Revert?
- - Git Revert command is used to remove changes from all 3 stages (work directory, staging area and local repository). We use this command after commit. Sometimes, we commit accidentally and later on we realize that we shouldn’t have done that. For this we use Git revert. This operation will generate new commit ID with some meaningful message to ignore previous commit where mistake is there. But, here we can’t completely eliminate the commit where mistake is there. Because Git tracks each and every change.
+ - Reverts to a specified commit but keeps the history of every other commit made to the code base, 
+   and creates a new commit for the reverted changes. 
+ - git revert <commit ID>
 
 4. Difference between Git pull and Git clone?
- - We use these two commands to get changes from central repository. For the first time if you want whole central repository in your local server, we use git clone. 
- - It brings entire repository to your local server. Next time onwards you might want only changes instead of whole repository. In this case, we use Git pull.
- - Git clone is to get whole copy of central repository
- - Git pull is to get only new changes from central repository (Incremental data)
+ - Git clone copies all files to the local machine, while git pull only copies the modified files to the local machine
 
 5. What is the difference between Git pull and Fetch?
  - We use Git pull command to get changes from central repository. In this operation, internally two commands will get executed. One is Git fetch and another one is Git merge.
@@ -155,6 +159,10 @@ PACKAGE INSTALLATION:
  - So picking particular commit and merging into your current branch we call git cherry-pick.
 11. Git Branching strategy ?
 12. Git stages ?
+ - Working space
+ - Staging Area
+ - Local Repo
+ - Central repo
 
 
 
