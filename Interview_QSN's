@@ -185,14 +185,17 @@ PACKAGE INSTALLATION:
  1. Build Periodically : cron job / 5 astrics, Time Interval Build 
  2. Poll scm : * * * * * , Whenever developer does the code commits automatically Builds the code
  3. Build after other projects are Build
- 4. Trigger build remotely
+ 4. Trigger builds remotely
  5. Manual 
- 6. github hook trigger for git scm polling.
+ 6. GitHub hook trigger for GITScm polling
 
 2. Jenkins Upstream & downstream jobs? Build - Pipeline
- - We have builds like Compile, Package & Deploy and want to run in sequence order that is executing one by one build in a sequential order).
- - Compile is called a upstream 
- - Deploy is called as downstream.
+ - Upstream project triggers another project after build
+ - Use case of upstream: The "build" pipeline could be an upstream pipeline that triggers the "test" pipeline 
+   when the code compilation is successful.
+ - Downstream project triggers itself when particular project build completes
+ - Use case of Downstream: The "test" pipeline could be a downstream pipeline that waits for the "build" pipeline to complete successfully 
+   before it starts running the tests.
 
 3. Multibranch Pipeline with a Webhook on Jenkins.
  - Sometimes it may be necessary to create a pipeline on Jenkins for each Git branch. In this case it could be difficult to create independent pipeline for each branch. 
@@ -201,6 +204,7 @@ PACKAGE INSTALLATION:
  - Through Multibranch pipeline we can create a pipeline for each branch in a repository and it also create or remove when there is a change in the branches.
 
 Create a Multibranch Pipeline: 
+Ref: https://valaxytech.medium.com/multibranch-pipeline-on-jenkins-with-webhook-a65decede4f8
  - Login to Jenkins GUI
  - Click on “New Item” → Specify a job name → Select “Multibranch Pipeline option”
  - Give Display Name and Description
@@ -295,7 +299,7 @@ Become: true install jdk & tomcat8, through copy module src file and destination
  - Mvn goals – clean compile install: spelling error 
  - Compile Errors- Developers 
  - pom.xml - distribution management , pulls any dependecies etc
- - 
+ 
 
 PRE-BUILD CHECKS:
  - Mock builds
