@@ -179,5 +179,163 @@ PACKAGE INSTALLATION:
  - Local Repo
  - Central repo
 
+=============================: JENKINS :=============================================
+
+1. Jenkins Trigger:
+ 1. Build Periodically : cron job / 5 astrics, Time Interval Build 
+ 2. Poll scm : * * * * * , Whenever developer does the code commits automatically Builds the code
+ 3. Build after other projects are Build
+ 4. Trigger build remotely
+ 5. Manual 
+ 6. github hook trigger for git scm polling.
+
+2. Jenkins Upstream & downstream jobs? Build - Pipeline
+ - We have builds like Compile, Package & Deploy and want to run in sequence order that is executing one by one build in a sequential order).
+ - Compile is called a upstream 
+ - Deploy is called as downstream.
+
+3. Multibranch Pipeline with a Webhook on Jenkins.
+ - Sometimes it may be necessary to create a pipeline on Jenkins for each Git branch. In this case it could be difficult to create independent pipeline for each branch. 
+ - Besides that what if we create or delete a branch in future? So someone has to take care of the pipelines on Jenkins whenever there is change in branches. 
+ - That’s where Multibranch pipeline comes into picture.
+ - Through Multibranch pipeline we can create a pipeline for each branch in a repository and it also create or remove when there is a change in the branches.
+
+Create a Multibranch Pipeline: 
+ - Login to Jenkins GUI
+ - Click on “New Item” → Specify a job name → Select “Multibranch Pipeline option”
+ - Give Display Name and Description
+ - Under Branch Sources → Add source → Chose Git → and provide GitHub URL and Credentials (Credentials are optional if it is public repo)
+ - Under Build Configuration → chose Jenkinsfile path. Most of the case it will be under Repo root directory.
+ - Under "Behaviour" select branch name or we can add in Jenkinsfile with when expression
+
+Apply and Save the job.
+ - Now Jenkins automatically scans the repository and create a job for each branch wherever it finds a Jenkinsfile and initiate first build.
+
+Using Webhook:
+ - If you wish to automate the build process in the multibranch pipeline we can use Webhook. This feature is not enabled until we install “Multibranch Scan Webhook Trigger”.
+ - This enables an option “scan by webhook” under “Scan Multibranch Pipeline Triggers”. Here we should give a token.
+ - Now to enable auto build process we should provide Jenkins URL with token in the GitHub. 
+ - For this log into GitHub → settings → Webhooks → Add webhook.
+ - Provide Payload URL and Content type as “application/json” and click on Add webhook
+
+4. Jenkins Pipeline: 
+ - In Jenkins pipeline is a collection of events / Jobs which are interlinked with one another in a sequence.
+ - Jenkins pipeline is a “suite of plugins” which supports implementing & integrating “continuous delivery pipelines” into Jenkins.
+ - We integrate pipelines into Jenkins either “Plugins” or “scripts”.
+ - It starts from version control to the end users and customers.
+ - Jenkins pipelines written in file called “Jenkinsfile”.
+ - Pipeline defines the entire build process which included building the application, testing & delivering it.
+Two ways to create Jenkins file:
+ 1. Pipeline script.
+ 2. pipeline script from SCM.
+Pipeline Syntax: Two types:
+ - Scripted (1st syntax , Groovy engine , advance scripting capabilities , high flexibility )
+ - Declarative (recent addition , easier to get started , pre-defined structure )
+Declarative Pipeline:
+ - “Pipeline”  must be top level
+ - “Agent”
+ - “Stages” : where the whole work happens.
+ - Under stages we have “stage” i.e build test package deploy(.jenkins/workspace) etc
+ - Under stage we have “steps” (script ), sh rm –rf , sh git clone , sh mvn clean etc
+
+5. CONTINOUS INTEGRATION: build stage to Testing Stage. 
+ - Continuous integration (CI) is an automated process in DevOps which generate software and its features quickly and efficiently.
+ - Developers write the code and stores the code in the centralized repository called version control system i.e in GitHub, Code commit happens continuously. 
+ - Code will move to build server where code build, tested and evaluated which generates the artifact like war/jar and stores in artifact repo like Nexus/Jfrog . 
+ - A successful CI build may lead to further stages of continuous delivery.
+ - If a build fails, the CI system blocks it from progressing to further stages. The team receives a report and repairs the build quickly, typically within minutes.
+Benefits of CI:
+ - Improved developer productivity
+ - Find bugs earlier, fix them faster
+
+Continuous Delivery & Continuous Deployment:
+ - Continuous delivery is an extension of continuous integration since it automatically deploys all code changes to a SIT,Dev,LUAT  environment after the build stage.
+ - In delivery, there is a final manual approval required before pre-prod & production release. 
+ - In the deployment phase, the package is opened and reviewed with a system of automated checks. If the checks fail the package is rejected. 
+ - When the checks pass the package is automatically deployed to production. Continuous deployment is the full end to end, automated software deployment pipeline.
+
+6. PROJECT-1  JENKINS-ANSIBLE-NODE / TOMCAT SERVER:
+PREREQUISITES: Jenkins server, Ansible server, Tomcat/ansible node
+ - Connect tomcat server with Ansible mster then Ansible mstr with Jenkins server.
+ - In Jenkins Manage Plugins install “Publish Over SSH”. Install without restart.
+ - Publish Over SSH: path to key: /root/.ssh/ id_rsa (private key)
+ - ADD server- Server name: Ansible mstr hostname, 
+ - Hostname: Public IP, 
+ - Usrname: root, 
+ - Remote directory: /opt   “Test Configuration – Success or Not” 
+Choose Freestyle Project
+ - SCM: Github URL
+ - Build: Invoke Top Level Maven Target
+ - Maven-goals (clean compile test package install)
+Write the playbook: In Ansible Mstr
+Host: all
+Gather_facts: yes
+Become: true install jdk & tomcat8, through copy module src file and destination path (var/lib/tomcat/webapps)
+
+ - After compile “Post Build Action”-send build artifact over SSH-
+ - Transfer: source file, .war file then remote directory path->
+ - Execute command: ansible-playbook playbooks/pb1.yml
+ - Ansible Mstr to Tomcat server/Nodes:
+
+7. JENKINS & SLAVE CONFIGURATION:
+ Jenkins Server & Jenkins salve Node Communicate with SSH config.
+ - In slave have to create workspace /opt/.jenkins
+ - Slave node install java 
+ - Jenkins server – Manage Nodes & Clouds , New Node , remote root directory - /opt/.jenkins
+ - “Restrict where this project can be run”
+
+8. JENKINS ROLES BASED AUTHORISE STRATEGY?
+ - Manage User: Create the user
+ - Manage Jenkins: manage plugins: “role based auth strategy “
+ - Configure global security: Authorization: “Role based strategy “: SAVE
+ - Manage and assign roles: Manage roles: roles to add
+
+9. JENKINS BUILD FAILURES:
+ - Disk full
+ - Mvn goals – clean compile install: spelling error 
+ - Compile Errors- Developers 
+ - pom.xml - distribution management , pulls any dependecies etc
+ - 
+
+PRE-BUILD CHECKS:
+ - Mock builds
+ - Proper software version checks
+ - Disk sizes
+ - Check whether machine is reachable or not.
+ - Network Intimate Issue
+
+10. JEKINS BACKUP:
+ - Manage Jenkins- Plugins- “thinbackup”, enter
+ - Setting- Configure,
+backup directory path: /tmp/backup1
+ - backup schedule – Using Cron tab
+ - Max Number of backups – 2/3
+Click On Backup Now & Restore Now.
+
+11. Jenkins Env Variables.
+ - BRANCH_NAME
+ - CHANGE_ID
+ - CHANGE_URL
+ - BUILD_ID
+ - JOB_NAME
+ - BUILD_TAG
+
+12. How to take Backup & restore jenkins configuration and data?
+ - backup the jenkins plugins by copying the "plugins" directory in the jenkins home dir to the another location.
+ - Backup config files "jenkins.xml" & "secrets" by copying them to another location.
+ - we can copy the "job" dir "userContent" dir to another location.
+
+13. Configure new jenkins pipeline but getting error says "no tool maven found", how to resolve this issue?
+ - Jenkins unable to locate maven installation directory. 
+ - need to provide correct path in jenkins.
+ - we need to go to jenkins dashboard-->manage jenkins-->global tool configuration-->add maven --> provide the path.
+ - MAVEN_HOME path need to provide.
+
+14. You have a jenkins pipeline that runs unit test for your app, but the pipeline fails when the test fails, 
+How would you configure the pipeline to continue running even after is a test fails?
+ - We need to use the try-catch block in jenkinsfile.
+ - In try block - we need to add jenkinsfile that contains a cmd to run the unit test.
+ - Add catch block - will execute if a test fails.
+
 
 
