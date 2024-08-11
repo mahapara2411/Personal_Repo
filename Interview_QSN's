@@ -425,7 +425,7 @@ Ex:
 13. what happned to container logs if you stop/restarted the container ? logs deleted or what?
  - we won't be loosing any logs.
  - /var/logs/
- - if deleted the container then will loose it, or we can push it to splunk. 
+ - if container is deleted then will loose it, or we can push it to splunk. 
 
 14. If docker image 2.5gb, what will be cause of concern? how to tackle this?
  - building time will be longer.
