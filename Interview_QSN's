@@ -458,5 +458,9 @@ Ex:
  docker run -d --name demo tree httpd telnet
 
 16. Docker Compose?
- - 
+ - It is a tool for running multi-container applications on Docker defined using the Compose file format. 
+ - A Compose file is used to define how one or more containers that make up your application are configured.
+ - Once we have a Compose file, we can create and start the application with a single command.
+ - E.x. docker compose up
+ - docker compose down
 
