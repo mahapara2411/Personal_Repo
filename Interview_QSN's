@@ -179,6 +179,9 @@ PACKAGE INSTALLATION:
  - Local Repo
  - Central repo
 
+13. How to ignore any changes in a file/folder.
+ - By creating vi .gitignore and specify the file or folder inside this
+
 =============================: JENKINS :=============================================
 
 1. Jenkins Trigger:
