@@ -29,6 +29,7 @@ GIT COMMANDS:
  git branch -> To see branch details
  git branch <branch_name> / git checkout -b <branch_name> -> To create new branch
  git checkout <branch_name> -> to go to particular branch
+ git clone -b <branchname>  --single-branch <Repo-url> -> To Clone single branch in git
 
 ---------How to set passwordless authentication in github--------
 Go to Setting->Developer Setting->Personal access Tokens->Select Tokens(classic)->Generate New Token->Select Generate new token(classic)->Provide anything in the Note,expiration and selsct all the scopes->click on generate token
