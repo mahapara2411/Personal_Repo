@@ -196,6 +196,9 @@ $ awk '{print, $2}' employee.txt ----> to print the second column
 NR -> Display field number
 NF -> Display last field
 
+------File Transfer from local to linux machine and vice versa------
+ - By using Winscp Tool
+
 
 
 
