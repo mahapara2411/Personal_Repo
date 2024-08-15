@@ -66,6 +66,7 @@ Ref: https://medium.com/@sonalijain0605/docker-components-41e847893d8a
   - docker rmi <image_name> -> To remove Image
   - docker rmi <a2a15febcdf3> <4bb46517cac3> -> To remove multiple images
   - docker rmi $(docker images -q) -> To remove all docker images
+  - docker images -f "dangling=true" -> To remove dangling Images
   - docker run nginx:latest -> To run containers
   - docker run -d nginx:latest -> To run containers in detached mode
   - docker container ls -> To list the running containers
