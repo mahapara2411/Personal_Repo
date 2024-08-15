@@ -80,6 +80,7 @@ Ref: https://medium.com/@sonalijain0605/docker-components-41e847893d8a
   - docker inspect <container_name/container_id> -> To inspect the containers in detail like IP, volume, network, env path etc (low level informations)
   - docker logs -f <container_name> -> To view the logs of the container. 
   - docker exce -it <Container_id> /bin/sh -> To get inside container
+  - docker system prune -> Remove all stopped container, dangling images, all unused networks
 
 - To Expose Ports (single/multiple):
   - docker run -d -p 8080:80 nginx:latest -> To expose external port, Map local host 8080 to port 80 inside of the container
