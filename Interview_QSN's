@@ -347,6 +347,9 @@ How would you configure the pipeline to continue running even after is a test fa
 15. What is Multibranch Pipeline and its use?
  - 
 
+16. If we forget Jenkins Password, how would we login back?
+ - Go to vi config.xml and make the <useSecurity> tag as false which is Ttue by Default
+
 --------: DOCKER :-------------
 
 1.  VM's                      Container
