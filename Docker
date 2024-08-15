@@ -75,6 +75,7 @@ Ref: https://medium.com/@sonalijain0605/docker-components-41e847893d8a
   - docker rm <Container_id/ Container_name> / docker rm  -f <Container_id/ Container_name> -> To remove the container / To remove the container forcefully
   - docker ps -aq -> To retrieve every single container id
   - docker rm $(docker ps -aq) -> To remove every single container
+  - docker container prune -> To remove all the stopped containers
   - docker run --name <website> -d -p 8080:80 -p 3000:80 nginx:latest -> To name the container as "website"
   - docker inspect <container_name/container_id> -> To inspect the containers in detail like IP, volume, network, env path etc (low level informations)
   - docker logs -f <container_name> -> To view the logs of the container. 
