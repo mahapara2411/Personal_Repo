@@ -473,3 +473,10 @@ Ex:
  - E.x. docker compose up
  - docker compose down
 
+17. Can we have multiple CMD in Dockerfile?
+ - It is not useful as only the last CMD will be taken into account.
+
+18. Docker Swarm?
+ - Docker Swarm is a group of either physical or virtual machines that are running the docker application and that have been configured to join together in a cluster.
+
+
