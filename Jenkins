@@ -169,15 +169,17 @@ Jenkins Master, slave concept:
 
 Steps to Configure Jenkins Master and Slave Nodes:
   1. Click on Manage Jenkins
-  2. Click on Manage nodes
+  2. Click on Manage nodes and clouds
   3. Select New node-> Provide Node name-> Select permanent agent-> ok
   4. Enter the required Info:
       - Name: Name of the Slave. e.g: Test
       - Description: Description for this slave (optional). e.g: testing slave
-      - # of Executors: Maximum number of Parallel builds Jenkins master perform on this slave. e.g: #2
+      - # of Executors: Number of jobs that the slave machine can run parallely. e.g: #2
       - Remote root directory: A slave needs to have a directory dedicated to Jenkins. Specify the path to this directory on the agent. e.g: /home/
       - Usage: Controls how Jenkins schedules builds on this node. e.g: use this node as much as possible
       - Launch method: Controls how Jenkins starts this agent. e.g: Launch agent by connecting it to the master
+                       If this option is not available go to Jenkins home page -> Manage Jenkins -> Configure Global Security. In agent section Click on Random and save.
+      - Custom WorkDir Path: Workspace of Slave node.
       - Availablity: e.g.: Keep this agent online as much as possible
   5. click save
   6. Download agent.jar and slave-agent.jnlp and copy it to the slave machine
