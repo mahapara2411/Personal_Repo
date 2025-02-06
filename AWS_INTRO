@@ -204,6 +204,18 @@ Ref: https://www.simplilearn.com/tutorials/aws-tutorial/aws-s3
  - Size of VPC can be defined by using IP address range
  - subnet -> Splitting the IP address of the VPC
  - Inside VPC - Internet gateway - Public subnet- Elastic Load balancer (ELB) (Sends the request to private subnet) - Router Table - Security group - Private subnet
- - NACL - 
+ 
  - NAT Gateway - Helps to download resource from Internet and masks the IP address. It is cretaed in the Public subnet
  - SNAT - 
+ - Security group 
+  - At Instance level
+  - Only allowed rules
+  - Stateful
+    - Data from one session is carried over to the next
+    - Inbound traffic is allowed, outbound traffic is automatically allowed
+ - NACL
+  - At Subnet level
+  - Both allowed and deny rules
+  - Stateless
+    - Doesn't preserve data between sessions
+    - Depends on database or cache to manage state
